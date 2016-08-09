@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 <generator uri="http://jekyllrb.com" version="3.0.3">Jekyll</generator>
-<link href="http://thomashepner.github.io/blog/feed.xml" rel="self" type="application/atom+xml" />
-<link href="http://thomashepner.github.io/blog/" rel="alternate" type="text/html" />
-<updated>2016-08-09T17:36:24-04:00</updated>
-<id>http://thomashepner.github.io/blog/</id>
+<link href="http://localhost:3000/feed.xml" rel="self" type="application/atom+xml" />
+<link href="http://localhost:3000/" rel="alternate" type="text/html" />
+<updated>2016-08-09T17:47:53-04:00</updated>
+<id>http://localhost:3000/</id>
 <title>Thomas Hepner</title>
 <subtitle>Thoughts on RecSys readings and papers.</subtitle>
 <entry>
 <title>Markdown Extra Components</title>
-<link href="http://thomashepner.github.io/blog/markdown-extra-components/" rel="alternate" type="text/html" title="Markdown Extra Components" />
+<link href="http://localhost:3000/markdown-extra-components/" rel="alternate" type="text/html" title="Markdown Extra Components" />
 <published>2016-02-24T22:48:00-03:00</published>
 <updated>2016-02-24T22:48:00-03:00</updated>
-<id>http://thomashepner.github.io/blog/markdown-extra-components</id>
-<content type="html" xml:base="http://thomashepner.github.io/blog/markdown-extra-components/">&lt;h2 id=&quot;summary&quot;&gt;Summary:&lt;/h2&gt;
+<id>http://localhost:3000/markdown-extra-components</id>
+<content type="html" xml:base="http://localhost:3000/markdown-extra-components/">&lt;h2 id=&quot;summary&quot;&gt;Summary:&lt;/h2&gt;
 
 &lt;p&gt;You can pick as item to see how to apply in markdown.&lt;/p&gt;
 
@@ -204,11 +204,11 @@ star: true
 </entry>
 <entry>
 <title>Markdown Common Elements</title>
-<link href="http://thomashepner.github.io/blog/markdown-common-elements/" rel="alternate" type="text/html" title="Markdown Common Elements" />
+<link href="http://localhost:3000/markdown-common-elements/" rel="alternate" type="text/html" title="Markdown Common Elements" />
 <published>2016-02-24T22:44:00-03:00</published>
 <updated>2016-02-24T22:44:00-03:00</updated>
-<id>http://thomashepner.github.io/blog/markdown-common-elements</id>
-<content type="html" xml:base="http://thomashepner.github.io/blog/markdown-common-elements/">&lt;h2 id=&quot;summary&quot;&gt;Summary:&lt;/h2&gt;
+<id>http://localhost:3000/markdown-common-elements</id>
+<content type="html" xml:base="http://localhost:3000/markdown-common-elements/">&lt;h2 id=&quot;summary&quot;&gt;Summary:&lt;/h2&gt;
 
 &lt;p&gt;You can pick as item to see how to apply in markdown.&lt;/p&gt;
 
@@ -428,11 +428,11 @@ $(window).scroll(function() {&lt;/p&gt;
 </entry>
 <entry>
 <title>Indigo, minimalist jekyll theme</title>
-<link href="http://thomashepner.github.io/blog/indigo-jekyll-theme/" rel="alternate" type="text/html" title="Indigo, minimalist jekyll theme" />
+<link href="http://localhost:3000/indigo-jekyll-theme/" rel="alternate" type="text/html" title="Indigo, minimalist jekyll theme" />
 <published>2016-01-23T22:10:00-03:00</published>
 <updated>2016-01-23T22:10:00-03:00</updated>
-<id>http://thomashepner.github.io/blog/indigo-jekyll-theme</id>
-<content type="html" xml:base="http://thomashepner.github.io/blog/indigo-jekyll-theme/">&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/sergiokopplin/indigo/gh-pages/screen-shot.png&quot; alt=&quot;Screenshot&quot; /&gt;&lt;/p&gt;
+<id>http://localhost:3000/indigo-jekyll-theme</id>
+<content type="html" xml:base="http://localhost:3000/indigo-jekyll-theme/">&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/sergiokopplin/indigo/gh-pages/screen-shot.png&quot; alt=&quot;Screenshot&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Example of project - Indigo Minimalist Jekyll Template - &lt;a href=&quot;http://sergiokopplin.github.io/indigo/&quot;&gt;Demo&lt;/a&gt;. This is a simple and minimalist template for Jekyll for those who likes to eat noodles.&lt;/p&gt;
 
