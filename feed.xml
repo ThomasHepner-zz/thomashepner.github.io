@@ -3,10 +3,40 @@
 <generator uri="http://jekyllrb.com" version="3.0.3">Jekyll</generator>
 <link href="http://thomashepner.github.io/feed.xml" rel="self" type="application/atom+xml" />
 <link href="http://thomashepner.github.io/" rel="alternate" type="text/html" />
-<updated>2016-08-14T21:21:53-03:00</updated>
+<updated>2016-08-21T18:28:14-03:00</updated>
 <id>http://thomashepner.github.io/</id>
 <title>Thomas Hepner</title>
 <subtitle>Thoughts on RecSys readings and papers.</subtitle>
+<entry>
+<title>Week 2 Comments: An Algorithmic Framework For Performing Collaborative Filtering</title>
+<link href="http://thomashepner.github.io/week-2-comments-an-algorithmic-framework-for-performing-collaborative-filtering/" rel="alternate" type="text/html" title="Week 2 Comments: An Algorithmic Framework For Performing Collaborative Filtering" />
+<published>2016-08-21T15:35:00-03:00</published>
+<updated>2016-08-21T15:35:00-03:00</updated>
+<id>http://thomashepner.github.io/week-2-comments-an-algorithmic-framework-for-performing-collaborative-filtering</id>
+<content type="html" xml:base="http://thomashepner.github.io/week-2-comments-an-algorithmic-framework-for-performing-collaborative-filtering/">&lt;h2 id=&quot;papers-content&quot;&gt;Paper’s content&lt;/h2&gt;
+&lt;p&gt;I’ll be reviewing and commenting on a paper made by the GroupLens team on year 1999, where the team tried to go a little bit further on the Collaborative Filtering topic and issue some of the problems that rise when performing related tasks. It also introduces the advantages of using this method in recommender systems, and the most important metrics used to evaluate their performance.&lt;/p&gt;
+
+&lt;p&gt;Particularly important and relevant in this investigation is the definition of metrics for measuring a system’s performance. They assess three key dimensions: &lt;strong&gt;coverage&lt;/strong&gt; (percentage of items for which a recommender system can provide predictions), &lt;strong&gt;statistical accuracy&lt;/strong&gt; (compares the numerical prediction values against user ratings for the for the items that have both predictions and ratings), and &lt;strong&gt;decision-support accuracy&lt;/strong&gt; (how effectively predictions help a user select high-quality items from the item set).&lt;/p&gt;
+
+&lt;p&gt;They based their experiments on different ways for weighting users with respect to different relevant dimensions. The first one is users &lt;strong&gt;similarity&lt;/strong&gt;, based on the assumption that people trust historical providers of accurate recommendations. Then they focus on &lt;strong&gt;significance&lt;/strong&gt;, addressing the amount of trust to be placed in a correlation with another user. Finally, they study &lt;strong&gt;variance&lt;/strong&gt;, when some ratings a user gives to certain items is more valuable than others in discerning his/her interest.&lt;/p&gt;
+
+&lt;p&gt;Finally, the measured and studied algorithms for producing predictions and selecting a user’s neighborhood, both very sensitive to scalability and performance issues.&lt;/p&gt;
+
+&lt;h2 id=&quot;comments-and-critics&quot;&gt;Comments and critics&lt;/h2&gt;
+&lt;p&gt;This paper succeeds in presenting the recommendation problem as separate components, and delivering new algorithms that enhance the accuracy of predictions. I found interesting the introduction of the Spearman rank correlation coefficient, similar to Pearson’s but that doesn’t rely on strict model assumptions that may not apply to every dataset. Still, this method does not work well when ranking scales are too small, because of the amount of tied rankings.&lt;/p&gt;
+
+&lt;p&gt;I found especially important the introduction of ROC sensitivity for measuring the diagnostic power of a filtering system. This metric compares &lt;strong&gt;sensitivity&lt;/strong&gt;, or the probability of a randomly selecting good item being accepted, against &lt;strong&gt;specificity&lt;/strong&gt;. the chance of a randomly selected bad item being rejected by the filter. It is important because it introduces the concept of &lt;em&gt;goodness&lt;/em&gt; in information filtering, and also considers the probability of type I or type II errors in the test’s hypothesis.&lt;/p&gt;
+
+&lt;p&gt;Finally, the document still fails to address an important issue: scalability. Perhaps because large datasets of millions of user ratings didn’t exist at the time. Even though this wasn’t the research’s primary focus - they based their study in separating content filtering into separate components - I found out that the computing complexity of the problem was not addressed, and only in later related readings there were investigators trying to discover model-based solutions to the problem, as the Slope One Algorithm or Item-based content filtering.&lt;/p&gt;
+</content>
+<author>
+<name>thomashepner</name>
+</author>
+<category term="collaborative" />
+<category term="filtering" />
+<category term="recsys" />
+<summary>Paper’s contentI’ll be reviewing and commenting on a paper made by the GroupLens team on year 1999, where the team tried to go a little bit further on the Collaborative Filtering topic and issue some of the problems that rise when performing related tasks. It also introduces the advantages of using this method in recommender systems, and the most important metrics used to evaluate their performance.</summary>
+</entry>
 <entry>
 <title>Week 1 Comments: Collaborative Filtering Introduction</title>
 <link href="http://thomashepner.github.io/week-1-comments-collaborative-filtering-introduction/" rel="alternate" type="text/html" title="Week 1 Comments: Collaborative Filtering Introduction" />
