@@ -3,10 +3,40 @@
 <generator uri="http://jekyllrb.com" version="3.0.3">Jekyll</generator>
 <link href="http://thomashepner.github.io/feed.xml" rel="self" type="application/atom+xml" />
 <link href="http://thomashepner.github.io/" rel="alternate" type="text/html" />
-<updated>2016-08-21T18:28:14-03:00</updated>
+<updated>2016-08-21T23:25:46-03:00</updated>
 <id>http://thomashepner.github.io/</id>
 <title>Thomas Hepner</title>
 <subtitle>Thoughts on RecSys readings and papers.</subtitle>
+<entry>
+<title>Week 2 Comments: Item-based Collaborative Filtering Recommendation Algorithms</title>
+<link href="http://thomashepner.github.io/week-2-comments-item-based-collaborative-filtering-recommendation-algorithms/" rel="alternate" type="text/html" title="Week 2 Comments: Item-based Collaborative Filtering Recommendation Algorithms" />
+<published>2016-08-21T22:00:00-03:00</published>
+<updated>2016-08-21T22:00:00-03:00</updated>
+<id>http://thomashepner.github.io/week-2-comments-item-based-collaborative-filtering-recommendation-algorithms</id>
+<content type="html" xml:base="http://thomashepner.github.io/week-2-comments-item-based-collaborative-filtering-recommendation-algorithms/">&lt;h2 id=&quot;papers-content&quot;&gt;Paper’s content&lt;/h2&gt;
+&lt;p&gt;This paper introduces a brand new approach to Collaborative Filtering. Instead of computing predictions for ratings that a user would give to an item based on user-to-user similarity, this algorithm isolates the users that have rated a given pair of items an then computes the similarity &lt;strong&gt;between those items&lt;/strong&gt;. They also present several ways to calculate this similarity, like &lt;em&gt;cosine based&lt;/em&gt;, &lt;em&gt;correlation based&lt;/em&gt;, and &lt;em&gt;adjusted-cosine&lt;/em&gt; based similarities, and show how to use them to make predictions.&lt;/p&gt;
+
+&lt;p&gt;While trying to make predictions with this approach, the problem of two distant item vector arises: correlation may be misleading when the Euclidian distance between vectors is large, but they are still similar. That’s why they introduce a regression model for weighting similarities, so instead of using raw rating values, approximated values are used based on a linear regression model.&lt;/p&gt;
+
+&lt;p&gt;This research’s focus is on finding out if this different approach to Collaborative Filtering is similar or better than regular Collaborative Filtering, especially in terms of scalability. They discovered that, as item-based recommendation is model-based, it provided higher scalability, as it isolated neighborhood generation and prediction generation steps. This is mainly because the set of items is static compared to the number of users, that changes more often. Still, precomputing all item-to-item similarities would need O(n^2) space, which is not desirable in terms of performance. A solution to this would be retaining only small numbers of similar items (&lt;em&gt;k&lt;/em&gt; sized groups), with an obvious tradeoff in accuracy and coverage.&lt;/p&gt;
+
+&lt;h2 id=&quot;comments-and-critics&quot;&gt;Comments and critics&lt;/h2&gt;
+&lt;p&gt;I was skeptical on this new approach’s performance at first. It seemed to me than “inverting the problem’s matrix” would not yield improvements of any kind. But it turns out that the researchers have a fair point in having the strong assumption that the number or items remains fairly static through time, at least compared to the amount of users.&lt;/p&gt;
+
+&lt;p&gt;While trying to understand this approach, I took as an example the CiberDays that several e-commerces organize every now and then. Even though they introduce a large amount of new items every season, user growth escalates way quicker, and the advantages provided by pre-computation of item similarity may give an e-commerce platform the upper hand against its competition while trying to engage more users in better ways and in limited time.&lt;/p&gt;
+
+&lt;p&gt;Although this ways makes more sense (at least to me: when you are in an e-commerce store, you expect to see related items to what you are searching - that’s a fair assumption), it appears that the advantages are not as grand as one would expect, so the added complexity may not be worth the risk.&lt;/p&gt;
+
+&lt;p&gt;Still, this paper shows something that would be very important in the coming years: model-based algorithms provide high online performance, while making fairly strong assumptions. So by knowing the dataset well, you could implement a solution similar to this without loosing recommendation quality.&lt;/p&gt;
+</content>
+<author>
+<name>thomashepner</name>
+</author>
+<category term="collaborative" />
+<category term="filtering" />
+<category term="recsys" />
+<summary>Paper’s contentThis paper introduces a brand new approach to Collaborative Filtering. Instead of computing predictions for ratings that a user would give to an item based on user-to-user similarity, this algorithm isolates the users that have rated a given pair of items an then computes the similarity between those items. They also present several ways to calculate this similarity, like cosine based, correlation based, and adjusted-cosine based similarities, and show how to use them to make predictions.</summary>
+</entry>
 <entry>
 <title>Week 2 Comments: An Algorithmic Framework For Performing Collaborative Filtering</title>
 <link href="http://thomashepner.github.io/week-2-comments-an-algorithmic-framework-for-performing-collaborative-filtering/" rel="alternate" type="text/html" title="Week 2 Comments: An Algorithmic Framework For Performing Collaborative Filtering" />
