@@ -3,10 +3,50 @@
 <generator uri="http://jekyllrb.com" version="3.0.3">Jekyll</generator>
 <link href="http://thomashepner.github.io/feed.xml" rel="self" type="application/atom+xml" />
 <link href="http://thomashepner.github.io/" rel="alternate" type="text/html" />
-<updated>2016-08-21T23:25:46-03:00</updated>
+<updated>2016-08-21T23:52:51-03:00</updated>
 <id>http://thomashepner.github.io/</id>
 <title>Thomas Hepner</title>
 <subtitle>Thoughts on RecSys readings and papers.</subtitle>
+<entry>
+<title>Week 2 Comments: Slope One Predictors for Online Rating-Based Collaborative Filtering</title>
+<link href="http://thomashepner.github.io/week-2-comments-slope-one-predictors-for-online-rating-based-collaborative-filtering/" rel="alternate" type="text/html" title="Week 2 Comments: Slope One Predictors for Online Rating-Based Collaborative Filtering" />
+<published>2016-08-21T22:00:00-03:00</published>
+<updated>2016-08-21T22:00:00-03:00</updated>
+<id>http://thomashepner.github.io/week-2-comments-slope-one-predictors-for-online-rating-based-collaborative-filtering</id>
+<content type="html" xml:base="http://thomashepner.github.io/week-2-comments-slope-one-predictors-for-online-rating-based-collaborative-filtering/">&lt;h2 id=&quot;papers-content&quot;&gt;Paper’s content&lt;/h2&gt;
+&lt;p&gt;This research shows another model-based approach for making collaborative filtering. The researcher’s main focus is to prove that a new model, called Slope One predictors, could provide:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Ease of implementation.&lt;/li&gt;
+  &lt;li&gt;Ability to be updateable at execution.&lt;/li&gt;
+  &lt;li&gt;Efficiency at query time: queries fast at the expense of storage.&lt;/li&gt;
+  &lt;li&gt;Little expectation from first visitors.&lt;/li&gt;
+  &lt;li&gt;Accuracy within reason: a minor gain in accuracy is not always worth a major sacrifice in simplicity or scalability.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;A concept called &lt;em&gt;popularity differential&lt;/em&gt; is introduced, or how much better is one item liked than another. Many of this differentials exist within a training set for each unknown rating, and Slope One loosely takes advantage of them.&lt;/p&gt;
+
+&lt;p&gt;More specifically, Slope One predictors take into account both information from users who rated the same item, and from the other items rated by the same user - but it also considers data that is not factored in. In doing this, it only takes in ratings by users &lt;strong&gt;who have rated some common item with the &lt;em&gt;predictee&lt;/em&gt; user&lt;/strong&gt;, and only those ratings of items &lt;strong&gt;that the predictee user has also rated&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;But this first approach doesn’t take into account the number of ratings an observer has. As a user who has many ratings would be a much better predictor, the &lt;strong&gt;weighted slope one predictor&lt;/strong&gt; takes it into consideration. A more specific elaboration of the algorithm, called the &lt;strong&gt;bipolar slope one scheme&lt;/strong&gt;, splits the prediction in two parts: one for users that liked and one for users that disliked an item, applying a threshold between user’s liked and disliked items.&lt;/p&gt;
+
+&lt;h2 id=&quot;comments-and-critics&quot;&gt;Comments and critics&lt;/h2&gt;
+&lt;p&gt;The first consideration to have while studying Slope One is the one regarding the splitting the prediction into two. This is because this action “doubles” the number of users, but reduces the overall number of ratings in the calculation of the prediction, with an improvement in accuracy. Furthermore, splitting ratings into like and dislike subsets could improve accuracy even more. So, it is important to keep in mind a very quantifiable drawback in performance while separating predictions into groups.&lt;/p&gt;
+
+&lt;p&gt;Another question arises: what happens when the rating scale is not necessarily ordinal, when the difference between a 5-star rating and 4-stars is not the same as the one between 4-stars and 3-stars? It seems that calculating a threshold would be a more complex operation, hence making it harder to improve accuracy.&lt;/p&gt;
+
+&lt;p&gt;Still, this algorithm finally addresses the scalability problem while making the fair assumption that you only use a “cross shaped section” of the user-item matrix. Even though this assumption, I find it smart, given that the sparseness of the matrix is also being taken care of.&lt;/p&gt;
+
+&lt;p&gt;Further diving into recommender system’s history would show that Slope One predictors would become an important improvement, and be rapidly used by several enterprises.&lt;/p&gt;
+</content>
+<author>
+<name>thomashepner</name>
+</author>
+<category term="collaborative" />
+<category term="filtering" />
+<category term="recsys" />
+<summary>Paper’s contentThis research shows another model-based approach for making collaborative filtering. The researcher’s main focus is to prove that a new model, called Slope One predictors, could provide:</summary>
+</entry>
 <entry>
 <title>Week 2 Comments: Item-based Collaborative Filtering Recommendation Algorithms</title>
 <link href="http://thomashepner.github.io/week-2-comments-item-based-collaborative-filtering-recommendation-algorithms/" rel="alternate" type="text/html" title="Week 2 Comments: Item-based Collaborative Filtering Recommendation Algorithms" />
