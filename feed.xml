@@ -3,10 +3,46 @@
 <generator uri="http://jekyllrb.com" version="3.0.3">Jekyll</generator>
 <link href="http://thomashepner.github.io/feed.xml" rel="self" type="application/atom+xml" />
 <link href="http://thomashepner.github.io/" rel="alternate" type="text/html" />
-<updated>2016-08-21T23:52:51-03:00</updated>
+<updated>2016-08-28T18:50:52-03:00</updated>
 <id>http://thomashepner.github.io/</id>
 <title>Thomas Hepner</title>
 <subtitle>Thoughts on RecSys readings and papers.</subtitle>
+<entry>
+<title>Week 3 Comments: Recommender Systems: Sources of Knowledge and Evaluation Metrics</title>
+<link href="http://thomashepner.github.io/week-3-comments-recommender-systems-sources-of-knowledge-and-evaluation-metrics/" rel="alternate" type="text/html" title="Week 3 Comments: Recommender Systems: Sources of Knowledge and Evaluation Metrics" />
+<published>2016-08-28T15:35:00-03:00</published>
+<updated>2016-08-28T15:35:00-03:00</updated>
+<id>http://thomashepner.github.io/week-3-comments-recommender-systems-sources-of-knowledge-and-evaluation-metrics</id>
+<content type="html" xml:base="http://thomashepner.github.io/week-3-comments-recommender-systems-sources-of-knowledge-and-evaluation-metrics/">&lt;h2 id=&quot;papers-content&quot;&gt;Paper’s content&lt;/h2&gt;
+&lt;p&gt;This paper offers an introduction to Recommender Systems, doing a quick review of their history and some of the most popular related algorithms used. First, it shows how these systems are classified in terms of &lt;strong&gt;how they get their input information&lt;/strong&gt;, their learning process (&lt;strong&gt;memory or model based&lt;/strong&gt;), etc. Thus, they fall into three categories: &lt;strong&gt;rule-based&lt;/strong&gt;, &lt;strong&gt;content-based&lt;/strong&gt;, and &lt;strong&gt;usage-based&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;Ruler-based systems make decision based on some rules extracted from user profiles. They’re popular within e-commerce systems, where administrators can set rules based on statistical, psychological and demographic information about users. A problem with this systems are the complex methods used in generating profiles, and biased inputs for the filters.&lt;/p&gt;
+
+&lt;p&gt;Content-based recommender systems provide recommendations to users based on comparing items to others that the user has shown interest in. Thus, the user’s profile becomes an explanation of product characteristics that the user chose before. It relies on information retrieval techniques such as classification, clustering and text analysis.&lt;/p&gt;
+
+&lt;p&gt;Finally, Collaborative Filtering systems are also successful in e-commerce solutions, performing standard memory-based classification based on neighborhoods.&lt;/p&gt;
+
+&lt;p&gt;More importantly, the paper assesses several evaluation metrics for recommender systems. They can be classified into &lt;strong&gt;prediction based metrics&lt;/strong&gt;, that tells which algorithm makes fewer mistakes when inferring how a user will evaluate a proposed recommendation; &lt;strong&gt;information retrieval related metrics&lt;/strong&gt;, used when the user has the option to evaluate an item as relevant or not from a list of recommendations; and &lt;strong&gt;diversity, novelty, and coverage&lt;/strong&gt;, to compare between algorithms.&lt;/p&gt;
+
+&lt;h2 id=&quot;comments-and-critics&quot;&gt;Comments and critics&lt;/h2&gt;
+&lt;p&gt;As this paper is more of a review than an investigation, it is an informative way of displaying the state of the art in recommender systems (and as it was released in 2013, it is still an updated source of information).&lt;/p&gt;
+
+&lt;p&gt;I found interesting to learn about the Netflix Prize, and how a contest could drive a whole industry into improving its performance. Researching further, I found out that the secret before team Chaos’ success was combining different algorithms in their own account to improve final performance.&lt;/p&gt;
+
+&lt;p&gt;Several attempts of the team would lead into 7%, 8% improvements for the recommendation algorithm. Surprisingly (and un-intuitively), combining different approaches led to better results, even by continuously introducing new approaches to the solution.&lt;/p&gt;
+
+&lt;p&gt;Some of the team’s ideas were slicing the dataset by frequency, as people who rate a big bunch of movies at once tend to be rating movies that they watched a long time ago, showing different criteria for doing so. They also discovered that people tend to rate differently on Fridays versus Mondays, so moods appear by day of the week.&lt;/p&gt;
+
+&lt;p&gt;This relates to the paper because of the importance of knowing which evaluation metric to use in studying an algorithm. In the Netflix Prize, they used the Root Mean Squared Error metric, giving less importance to coverage, novelty and diversity, and focusing on accuracy.&lt;/p&gt;
+</content>
+<author>
+<name>thomashepner</name>
+</author>
+<category term="metrics" />
+<category term="sources" />
+<category term="recsys" />
+<summary>Paper’s contentThis paper offers an introduction to Recommender Systems, doing a quick review of their history and some of the most popular related algorithms used. First, it shows how these systems are classified in terms of how they get their input information, their learning process (memory or model based), etc. Thus, they fall into three categories: rule-based, content-based, and usage-based.</summary>
+</entry>
 <entry>
 <title>Week 2 Comments: Slope One Predictors for Online Rating-Based Collaborative Filtering</title>
 <link href="http://thomashepner.github.io/week-2-comments-slope-one-predictors-for-online-rating-based-collaborative-filtering/" rel="alternate" type="text/html" title="Week 2 Comments: Slope One Predictors for Online Rating-Based Collaborative Filtering" />
