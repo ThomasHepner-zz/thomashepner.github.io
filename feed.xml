@@ -3,7 +3,7 @@
 <generator uri="http://jekyllrb.com" version="3.0.3">Jekyll</generator>
 <link href="http://thomashepner.github.io/feed.xml" rel="self" type="application/atom+xml" />
 <link href="http://thomashepner.github.io/" rel="alternate" type="text/html" />
-<updated>2016-09-04T17:07:46-03:00</updated>
+<updated>2016-09-04T18:11:58-03:00</updated>
 <id>http://thomashepner.github.io/</id>
 <title>Thomas Hepner</title>
 <subtitle>Thoughts on RecSys readings and papers.</subtitle>
@@ -41,6 +41,39 @@
 <category term="content" />
 <category term="recsys" />
 <summary>Paper’s contentContent-based recommender systems follow a different approach from the ones we’ve studied so far. They analyze an item’s description to identify others that would be interesting to a certain user. As a system of this kind would need to analyze thousands of items in short periods of time, in order to recommend accurately to a user, every part of the process should be as efficient as possible. Therefore, it is of interest to represent each item in a way that it makes possible to process easily.</summary>
+</entry>
+<entry>
+<title>Week 4 Comments: Collaborative Filtering for Social Tagging Systems: an Experiment with CiteULike</title>
+<link href="http://thomashepner.github.io/week-4-comments-collaborative-filtering-for-social-tagging-systems-an-experiment-with-citeulike/" rel="alternate" type="text/html" title="Week 4 Comments: Collaborative Filtering for Social Tagging Systems: an Experiment with CiteULike" />
+<published>2016-09-04T16:00:00-03:00</published>
+<updated>2016-09-04T16:00:00-03:00</updated>
+<id>http://thomashepner.github.io/week-4-comments-collaborative-filtering-for-social-tagging-systems-an-experiment-with-citeulike</id>
+<content type="html" xml:base="http://thomashepner.github.io/week-4-comments-collaborative-filtering-for-social-tagging-systems-an-experiment-with-citeulike/">&lt;h2 id=&quot;papers-content&quot;&gt;Paper’s content&lt;/h2&gt;
+&lt;p&gt;As user-contributed content is becoming more diverse in nature and quality, and traditional 5-10 point ratings are mostly unavailable, there are some new challenges for collaborative tagging systems. The loss of quality control and fine-grained ratings in these systems can be compensated by tags and explicit connections between users. Still, the paper states that there was no standard in how to take these features into account. There is some evidence, though, that social links improve personalization quality.&lt;/p&gt;
+
+&lt;p&gt;The experiment conducted during this investigation consisted in crawling data from CiteULike: first, crawl a user’s posted articles. Then, calculate neighborhoods of users who posted the same articles and who share the same tags. Finally, use Krovetz’ algorithm to modify tags.&lt;/p&gt;
+
+&lt;p&gt;The algorithm tested consisted of two steps: find the neighborhood of the center user, and rank the articles to be recommended. They used three different approaches: &lt;strong&gt;Classic Collaborative Filtering&lt;/strong&gt;, &lt;strong&gt;Neighbor-weighted CF&lt;/strong&gt;, and &lt;strong&gt;BM25-based Similarity&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;While testing this different methods, they discovered that, as predicted, CCF performed worse than the other algorithms, that where very close in terms of performance. The results also led to find out that the ranking order of the recommendations was very close to the optimal one.&lt;/p&gt;
+
+&lt;p&gt;An important conclusion was that &lt;strong&gt;including the number of raters in the ranking formula is an important factor to consider in the success of these recommendations&lt;/strong&gt;, as it takes into account the weight a good rater has, compared too poor raters of a certain article. In doing so, this practice reduces the uncertainty produced by items with too few ratings.&lt;/p&gt;
+
+&lt;p&gt;As Pearson’s correlation performs badly in this context, tag-based approaches can be a suitable alternative to obtain user neighborhood in social tagging systems.&lt;/p&gt;
+
+&lt;h2 id=&quot;comments-and-critics&quot;&gt;Comments and critics&lt;/h2&gt;
+&lt;p&gt;The paper introduces the BM25-based formula for calculating similarity, a non-binary probabilistic method used in information retrieval that returns the relevance that the documents of one collection has given a query. It compares the tags of the center user with a query, and the set of tags of each neighbor as a document. This method was first used in the Okapi BM25 information retrieval system in the 1980s.&lt;/p&gt;
+
+&lt;p&gt;There are several extensions of the algorithm, like BM25F and BM25+. The first one considers the document to be composed from several fields, like headers and main text; the second addresses unfairly scored documents that have a similar relevance to shorter documents that do not contain the search query at all.&lt;/p&gt;
+
+&lt;p&gt;I think the use of information retrieval techniques is a good choice in this kind of systems, especially because tags are a structured form of information, therefore making it easier to retrieve information and rank recommendations.&lt;/p&gt;
+</content>
+<author>
+<name>thomashepner</name>
+</author>
+<category term="content" />
+<category term="recsys" />
+<summary>Paper’s contentAs user-contributed content is becoming more diverse in nature and quality, and traditional 5-10 point ratings are mostly unavailable, there are some new challenges for collaborative tagging systems. The loss of quality control and fine-grained ratings in these systems can be compensated by tags and explicit connections between users. Still, the paper states that there was no standard in how to take these features into account. There is some evidence, though, that social links improve personalization quality.</summary>
 </entry>
 <entry>
 <title>Week 3 Comments: Recommender Systems: Sources of Knowledge and Evaluation Metrics</title>
