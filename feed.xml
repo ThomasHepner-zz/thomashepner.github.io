@@ -3,10 +3,45 @@
 <generator uri="http://jekyllrb.com" version="3.0.3">Jekyll</generator>
 <link href="http://thomashepner.github.io/feed.xml" rel="self" type="application/atom+xml" />
 <link href="http://thomashepner.github.io/" rel="alternate" type="text/html" />
-<updated>2016-08-28T18:50:52-03:00</updated>
+<updated>2016-09-04T17:07:46-03:00</updated>
 <id>http://thomashepner.github.io/</id>
 <title>Thomas Hepner</title>
 <subtitle>Thoughts on RecSys readings and papers.</subtitle>
+<entry>
+<title>Week 4 Comments: Content-based Recommendation Systems</title>
+<link href="http://thomashepner.github.io/week-4-comments-content-based-recommendation-systems/" rel="alternate" type="text/html" title="Week 4 Comments: Content-based Recommendation Systems" />
+<published>2016-09-04T16:00:00-03:00</published>
+<updated>2016-09-04T16:00:00-03:00</updated>
+<id>http://thomashepner.github.io/week-4-comments-content-based-recommendation-systems</id>
+<content type="html" xml:base="http://thomashepner.github.io/week-4-comments-content-based-recommendation-systems/">&lt;h2 id=&quot;papers-content&quot;&gt;Paper’s content&lt;/h2&gt;
+&lt;p&gt;Content-based recommender systems follow a different approach from the ones we’ve studied so far. They analyze an item’s description to identify others that would be interesting to a certain user. As a system of this kind would need to analyze thousands of items in short periods of time, in order to recommend accurately to a user, every part of the process should be as efficient as possible. Therefore, it is of interest to represent each item in a way that it makes possible to process easily.&lt;/p&gt;
+
+&lt;p&gt;A common approach to represent unstructured text in an item’s description is to convert the free text to a structured representation. For example, each word can be an attribute of the document, with an integer value for its frequency or maybe a boolean value for appearance. There’s a technique called &lt;strong&gt;stemming&lt;/strong&gt;, where rather than using words, the &lt;strong&gt;root forms of words are stored&lt;/strong&gt;, creating a term that reflects the common meaning of similar words. A value, called &lt;strong&gt;&lt;em&gt;tf-idf&lt;/em&gt; weight&lt;/strong&gt;, is used to identify the frequency of each term in a document, relevant to a document collection. Using this value a recommender system can tell which terms are more central to the topic of the document.&lt;/p&gt;
+
+&lt;p&gt;To save a user’s preferences, the system saves user profiles with different types of information, storing ways to retrieve items that are of his/her interest, like a history of the user’s interaction with the system, customization settings, and even &lt;strong&gt;rules to recommend other product based on history&lt;/strong&gt;. In doing so, there are several tasks related to classification learning, using implicit and explicit feedback to construct a user’s model. It is important to note that &lt;strong&gt;implicit feedback can collect a large amount of data, but with some uncertainty&lt;/strong&gt;. Finally, the learning algorithm delivers a function that provides an estimate of the probability that a user will like an unseen item.&lt;/p&gt;
+
+&lt;p&gt;Several methods and approaches for performing content-based recommendation are explained throughout the paper. They explain how &lt;strong&gt;decision trees and rule induction&lt;/strong&gt; are used to represent an item’s description; how nearest neighbor methods compares similarity by using different functions depending on the type of data; and how relevance feedback can help improve recommendations based on previous queries performed by the user.&lt;/p&gt;
+
+&lt;p&gt;Finally, the paper introduces probabilistic methods and naïve Bayes methods for performing text classification in a probabilistic approach. Even though naïve Bayes’ assumption of class-conditional attribute independence is violated in this context, the algorithm still performs very well, and it has been proven that this condition is not necessary for optimality.&lt;/p&gt;
+
+&lt;h2 id=&quot;comments-and-critics&quot;&gt;Comments and critics&lt;/h2&gt;
+&lt;p&gt;This investigation’s final conclusion is that &lt;strong&gt;no content-based recommender system can give good recommendations if the content does not contain enough information to distinguish items the user likes from those the user doesn’t like&lt;/strong&gt;. Good examples that contain this kind of information are movies, restaurants and television. Still, better results are found by complementing with additional information. For example, including the opinion of other users by adding data associated to the representation of the examples.&lt;/p&gt;
+
+&lt;p&gt;What I found most interesting though was that a content-based approach can be used alongside a collaborative-filtering system to produce better recommendations. For example, a e-book store such as Amazon can use collaborative-filtering to recommend items that a user would like, but then filter them by categories using content-based algorithms. This ways it can leave out categories such as adult’s literature when recommending to a younger user.&lt;/p&gt;
+
+&lt;p&gt;I was interested in finding out who uses the content-based approach in their systems nowadays, and found out that music streaming service &lt;strong&gt;Pandora&lt;/strong&gt; uses machine learning methods to recommend by content, as it is &lt;strong&gt;not interested in relating the interest of one user to another&lt;/strong&gt;. &lt;span class=&quot;evidence&quot;&gt;Pandora does not rely on user’s opinions: only the musical classification of a song determines whether a station will play it. The service looks for music whose content structure is similar to the taste of the user, and chooses the songs closest to that definition, with their own filtering techniques.&lt;/span&gt;&lt;/p&gt;
+
+&lt;p&gt;Pandora’s system key method is to use an efficient proximity measure to determine neighborhoods for a radio station. As the number of songs in the platform remains fairly static, the algorithm performs in polynomial time. More so, the most important factor is the time it takes to choose the next song to play from the current station, and it can be done in &lt;em&gt;O(mn)&lt;/em&gt; time, where &lt;em&gt;m&lt;/em&gt; is the number of artists/songs in the station, and &lt;em&gt;n&lt;/em&gt; is the number of attributes that characterizes a song’s structure.&lt;/p&gt;
+
+&lt;p&gt;Applications like Pandora are a good example of how this type of recommendation is still relevant and worth studying.&lt;/p&gt;
+</content>
+<author>
+<name>thomashepner</name>
+</author>
+<category term="content" />
+<category term="recsys" />
+<summary>Paper’s contentContent-based recommender systems follow a different approach from the ones we’ve studied so far. They analyze an item’s description to identify others that would be interesting to a certain user. As a system of this kind would need to analyze thousands of items in short periods of time, in order to recommend accurately to a user, every part of the process should be as efficient as possible. Therefore, it is of interest to represent each item in a way that it makes possible to process easily.</summary>
+</entry>
 <entry>
 <title>Week 3 Comments: Recommender Systems: Sources of Knowledge and Evaluation Metrics</title>
 <link href="http://thomashepner.github.io/week-3-comments-recommender-systems-sources-of-knowledge-and-evaluation-metrics/" rel="alternate" type="text/html" title="Week 3 Comments: Recommender Systems: Sources of Knowledge and Evaluation Metrics" />
