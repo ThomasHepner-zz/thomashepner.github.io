@@ -3,10 +3,39 @@
 <generator uri="http://jekyllrb.com" version="3.0.3">Jekyll</generator>
 <link href="http://thomashepner.github.io/feed.xml" rel="self" type="application/atom+xml" />
 <link href="http://thomashepner.github.io/" rel="alternate" type="text/html" />
-<updated>2016-09-11T22:16:43-03:00</updated>
+<updated>2016-09-11T23:09:36-03:00</updated>
 <id>http://thomashepner.github.io/</id>
 <title>Thomas Hepner</title>
 <subtitle>Thoughts on RecSys readings and papers.</subtitle>
+<entry>
+<title>Week 5 Comments: Matrix Factorization Techniques for Recommender Systems</title>
+<link href="http://thomashepner.github.io/week-5-comments-matrix-factorization-techniques-for-recommender-systems/" rel="alternate" type="text/html" title="Week 5 Comments: Matrix Factorization Techniques for Recommender Systems" />
+<published>2016-09-11T21:00:00-03:00</published>
+<updated>2016-09-11T21:00:00-03:00</updated>
+<id>http://thomashepner.github.io/week-5-comments-matrix-factorization-techniques-for-recommender-systems</id>
+<content type="html" xml:base="http://thomashepner.github.io/week-5-comments-matrix-factorization-techniques-for-recommender-systems/">&lt;h2 id=&quot;papers-content&quot;&gt;Paper’s content&lt;/h2&gt;
+&lt;p&gt;This article shows how matrix factorization techniques can be used to improve performance in recommender systems, allowing incorporation of implicit feedback and other sources of knowledge.&lt;/p&gt;
+
+&lt;p&gt;In this approach, items and users are represented as vectors of factors inferred from the item rating patterns, and correspondence between items and user factors results in a recommendation. This allows incorporation of additional information, when explicit feedback is not available (most common scenario). As implicit feedback denotes the &lt;strong&gt;presence or absence of an event&lt;/strong&gt;, it can be represented as a densely filled matrix.&lt;/p&gt;
+
+&lt;p&gt;This model is closely related with SVD (&lt;em&gt;singular value decomposition&lt;/em&gt;), a well-known method for identifying latent semantic factors in information retrieval. Still, this method requires for factoring the user-item matrix, which can be prone to errors due to the high portion of missing values (sparse matrix).&lt;/p&gt;
+
+&lt;p&gt;In order to minimize the regularized squared error on the set of known ratings, two machine learning approaches are user: &lt;strong&gt;stochastic gradient descent&lt;/strong&gt; and &lt;strong&gt;alternating least squares&lt;/strong&gt;. The first one is easy to implement with relatively good running time, while the other is highly preferable in systems that can provide parallelization, and in those that rely on implicit data.&lt;/p&gt;
+
+&lt;p&gt;As most systems present the “cold-start” problem, it is helpful to incorporate additional sources of information, and matrix factorization delivers a way of doing so, integrating signal sources with enhanced user representation, modifying the user factor vectors.&lt;/p&gt;
+
+&lt;h2 id=&quot;comments-and-critics&quot;&gt;Comments and critics&lt;/h2&gt;
+&lt;p&gt;I found particularly interesting that, in using ALS as the learning algorithm, the process could be parallelized, as it is a feature needed in most systems these days. Doing further research, I found that a method called coordinate descent (CDD++) can be used for parallelizing matrix factorizations, and is scalable and efficient. It has lower time complexity per iteration than ALS, ando also achieves faster and more stable convergence than stochastic gradient descent, for larger scale matrices. More importantly, it can be parallelized in multi-core and distributed environments, therefore handling large-scale datasets and variables cannot fit in a single machine’s memory. More on this approach can be found in http://www.cs.utexas.edu/~inderjit/public_papers/kais-pmf.pdf.&lt;/p&gt;
+
+&lt;p&gt;What was more interesting was that even as the number of processors scale, CDD++ still performs way better than the other learning algorithms. For example, using 256 processors it is 40 times faster than DSGD and 20 times faster than ALS.&lt;/p&gt;
+</content>
+<author>
+<name>thomashepner</name>
+</author>
+<category term="content" />
+<category term="recsys" />
+<summary>Paper’s contentThis article shows how matrix factorization techniques can be used to improve performance in recommender systems, allowing incorporation of implicit feedback and other sources of knowledge.</summary>
+</entry>
 <entry>
 <title>Week 5 Comments: Hybrid Recommender Systems: Survey and Experiments</title>
 <link href="http://thomashepner.github.io/week-5-comments-hybrid-recommender-systems-survey-and-experiments/" rel="alternate" type="text/html" title="Week 5 Comments: Hybrid Recommender Systems: Survey and Experiments" />
