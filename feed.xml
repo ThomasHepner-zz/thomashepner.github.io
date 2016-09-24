@@ -3,10 +3,45 @@
 <generator uri="http://jekyllrb.com" version="3.0.3">Jekyll</generator>
 <link href="http://thomashepner.github.io/feed.xml" rel="self" type="application/atom+xml" />
 <link href="http://thomashepner.github.io/" rel="alternate" type="text/html" />
-<updated>2016-09-11T23:09:36-03:00</updated>
+<updated>2016-09-24T19:02:18-03:00</updated>
 <id>http://thomashepner.github.io/</id>
 <title>Thomas Hepner</title>
 <subtitle>Thoughts on RecSys readings and papers.</subtitle>
+<entry>
+<title>Week 6 Comments: Collaborative Filtering for Implicit Feedback Datasets</title>
+<link href="http://thomashepner.github.io/week-6-comments-collaborative-filtering-for-implicit-feedback-datasets/" rel="alternate" type="text/html" title="Week 6 Comments: Collaborative Filtering for Implicit Feedback Datasets" />
+<published>2016-09-24T16:00:00-03:00</published>
+<updated>2016-09-24T16:00:00-03:00</updated>
+<id>http://thomashepner.github.io/week-6-comments-collaborative-filtering-for-implicit-feedback-datasets</id>
+<content type="html" xml:base="http://thomashepner.github.io/week-6-comments-collaborative-filtering-for-implicit-feedback-datasets/">&lt;h2 id=&quot;papers-content&quot;&gt;Paper’s content&lt;/h2&gt;
+&lt;p&gt;Historic recommender systems studies have come to distinguish two separate approaches for predicting and recommending items to a user: content-based and collaborative filtering recommendations, each with preferred applications when it comes to analyzing the dataset available or the need of the user. In this investigation, the authors introduced a new way of incorporating user data to collaborative filtering, in order to improve its accuracy, and also to assess problems such as cold start.&lt;/p&gt;
+
+&lt;p&gt;As explicit feedback is not always available in a dataset, they proposed a way of using a much more abundant source of data: implicit feedback. This could manifest in the shape of purchase history in a e-commerce, browsing history, search patterns, even mouse movements performed by the user. Implicit feedback lacks the cold start problem: once the user gives approval to collect the data, no additional explicit feedback is required on the user’s part. Still, it also shows some new issues:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;No negative feedback&lt;/strong&gt;: concentrating only on gathered data leaves only with positive feedback, mispresenting the user profile.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Implicit feedback has too much noise&lt;/strong&gt;, or too much room for guessing.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Need for numerical values of implicit feedback to indicate confidence&lt;/strong&gt;.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Appropiate measures&lt;/strong&gt; that take availability, competition and repeated feedback into account.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The model proposed by the authors follows a method similar to the one seen in matrix factorization algorithms, where the goal is to find a vector for each user and a vector for each item that will factor user preferences, where these preferences are the inner products between those vectors. They also formalize the notion of the confidence which the variables need to measure, assessing the need for wide and greatly varying confidence levels, so there is a stronger indication that a user indeed likes an item.&lt;/p&gt;
+
+&lt;p&gt;Finally, the idea was to map users and items into a common latent factor space where they can be directly compared, and optimization had to take all possible user-item pairs into account, not only those corresponding to observed data. As the user-item matrix could easily reach billions of cells, they devised an alternating least squares optimization process, managing to make it scale linearly with the size of the data by using matrix factorizations and linear algebra.&lt;/p&gt;
+
+&lt;h2 id=&quot;comments-and-critics&quot;&gt;Comments and critics&lt;/h2&gt;
+&lt;p&gt;What was most interesting was the author’s concern of making transparent recommendations to the user, by saying that a good recommendation should be accompanied with an explanation. They managed to reduce the latent factor model into a linear model that predicts preferences as a linear function of past actions, weighted by item-item similarity.&lt;/p&gt;
+
+&lt;p&gt;It would be interesting to know of other extensions to this model. It was first tested being implemented in a large scale TV recommender system, but how does it adapt when used in other contexts? Given that watching TV involves many behavioral scenarios that have been studied by psychology, inferring implicit feedback can be strongly supported by theory. But what happens, for example, when applied in e-commerce recommender systems, music, or even tourism? I find that even though the model is robust in terms of managing generic implicit feedback, it lacks explanations on how to apply the model to other contexts.&lt;/p&gt;
+</content>
+<author>
+<name>thomashepner</name>
+</author>
+<category term="implicit" />
+<category term="feedback" />
+<category term="recsys" />
+<summary>Paper’s contentHistoric recommender systems studies have come to distinguish two separate approaches for predicting and recommending items to a user: content-based and collaborative filtering recommendations, each with preferred applications when it comes to analyzing the dataset available or the need of the user. In this investigation, the authors introduced a new way of incorporating user data to collaborative filtering, in order to improve its accuracy, and also to assess problems such as cold start.</summary>
+</entry>
 <entry>
 <title>Week 5 Comments: Matrix Factorization Techniques for Recommender Systems</title>
 <link href="http://thomashepner.github.io/week-5-comments-matrix-factorization-techniques-for-recommender-systems/" rel="alternate" type="text/html" title="Week 5 Comments: Matrix Factorization Techniques for Recommender Systems" />
@@ -138,7 +173,7 @@
 <content type="html" xml:base="http://thomashepner.github.io/week-3-comments-recommender-systems-sources-of-knowledge-and-evaluation-metrics/">&lt;h2 id=&quot;papers-content&quot;&gt;Paper’s content&lt;/h2&gt;
 &lt;p&gt;This paper offers an introduction to Recommender Systems, doing a quick review of their history and some of the most popular related algorithms used. First, it shows how these systems are classified in terms of &lt;strong&gt;how they get their input information&lt;/strong&gt;, their learning process (&lt;strong&gt;memory or model based&lt;/strong&gt;), etc. Thus, they fall into three categories: &lt;strong&gt;rule-based&lt;/strong&gt;, &lt;strong&gt;content-based&lt;/strong&gt;, and &lt;strong&gt;usage-based&lt;/strong&gt;.&lt;/p&gt;
 
-&lt;p&gt;Ruler-based systems make decision based on some rules extracted from user profiles. They’re popular within e-commerce systems, where administrators can set rules based on statistical, psychological and demographic information about users. A problem with this systems are the complex methods used in generating profiles, and biased inputs for the filters.&lt;/p&gt;
+&lt;p&gt;Ruler-based systems make decisions based on some rules extracted from user profiles. They’re popular within e-commerce systems, where administrators can set rules based on statistical, psychological and demographic information about users. A problem with this systems are the complex methods used in generating profiles, and biased inputs for the filters.&lt;/p&gt;
 
 &lt;p&gt;Content-based recommender systems provide recommendations to users based on comparing items to others that the user has shown interest in. Thus, the user’s profile becomes an explanation of product characteristics that the user chose before. It relies on information retrieval techniques such as classification, clustering and text analysis.&lt;/p&gt;
 

@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
+<loc>http://thomashepner.github.io/week-6-comments-collaborative-filtering-for-implicit-feedback-datasets/</loc>
+<lastmod>2016-09-24T16:00:00-03:00</lastmod>
+</url>
+<url>
 <loc>http://thomashepner.github.io/week-5-comments-matrix-factorization-techniques-for-recommender-systems/</loc>
 <lastmod>2016-09-11T21:00:00-03:00</lastmod>
 </url>
