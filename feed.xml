@@ -3,10 +3,35 @@
 <generator uri="http://jekyllrb.com" version="3.0.3">Jekyll</generator>
 <link href="http://thomashepner.github.io/feed.xml" rel="self" type="application/atom+xml" />
 <link href="http://thomashepner.github.io/" rel="alternate" type="text/html" />
-<updated>2016-09-24T19:02:18-03:00</updated>
+<updated>2016-09-26T18:33:37-03:00</updated>
 <id>http://thomashepner.github.io/</id>
 <title>Thomas Hepner</title>
 <subtitle>Thoughts on RecSys readings and papers.</subtitle>
+<entry>
+<title>Week 6 Comments: Recommender Systems: from Algorithms to User Experience</title>
+<link href="http://thomashepner.github.io/week-9-comments-recommender-systems-from-algorithms-to-user-experience/" rel="alternate" type="text/html" title="Week 6 Comments: Recommender Systems: from Algorithms to User Experience" />
+<published>2016-09-24T16:00:00-03:00</published>
+<updated>2016-09-24T16:00:00-03:00</updated>
+<id>http://thomashepner.github.io/week-9-comments-recommender-systems-from-algorithms-to-user-experience</id>
+<content type="html" xml:base="http://thomashepner.github.io/week-9-comments-recommender-systems-from-algorithms-to-user-experience/">&lt;h2 id=&quot;papers-content&quot;&gt;Paper’s content&lt;/h2&gt;
+&lt;p&gt;The present paper works as a review of recommender systems history, making an introduction to the first approaches to solve the recommendation problem. Besides briefly mentioning the first algorithms studied, and early applications to this new kind of technology, they introduce four categories where research has been done regarding the user experience on recommender systems topic.&lt;/p&gt;
+
+&lt;p&gt;The first group is the &lt;strong&gt;user-recommender lifecycle&lt;/strong&gt;, and talks about how these systems can adapt to different user needs. For example, new users have different needs than experienced ones, therefore each type can provide different types of value into the system. These considerations should be taken into account when handling new users, recognizing a user’s lifecycle, and viewing the service the system provides to a community.&lt;/p&gt;
+
+&lt;p&gt;The second group of important research involves more &lt;strong&gt;sophisticated notions of quality&lt;/strong&gt;, trying to go a little further than the average error metric, as it misses the features that are most important to user satisfaction in recommenders applications. One important source of research comes from discovering different sources of error, and accounting for each one in order to avoid making bad mistakes. Another source comes from the shift to top-N recommenders, made popular in early retail sales applications, where the most important work was done by using top-N precision and recall metrics in evaluating a top-N recommender. Finally, multidimensional ratings and tags and data quality also provide important sources of investigation.&lt;/p&gt;
+
+&lt;p&gt;The third group regards &lt;strong&gt;hidden dangers&lt;/strong&gt;, or the social risks related to the wide deployment of recommenders. There are some subtle (and interesting) risks such as social relationships structure threats, so being careful with privacy, social consequences of recommenders, and the robustness and manipulation resistance is a must for anyone that wants to implement a system like this.&lt;/p&gt;
+
+&lt;h2 id=&quot;comments-and-critics&quot;&gt;Comments and critics&lt;/h2&gt;
+</content>
+<author>
+<name>thomashepner</name>
+</author>
+<category term="algorithms" />
+<category term="ux" />
+<category term="recsys" />
+<summary>Paper’s contentThe present paper works as a review of recommender systems history, making an introduction to the first approaches to solve the recommendation problem. Besides briefly mentioning the first algorithms studied, and early applications to this new kind of technology, they introduce four categories where research has been done regarding the user experience on recommender systems topic.</summary>
+</entry>
 <entry>
 <title>Week 6 Comments: Collaborative Filtering for Implicit Feedback Datasets</title>
 <link href="http://thomashepner.github.io/week-6-comments-collaborative-filtering-for-implicit-feedback-datasets/" rel="alternate" type="text/html" title="Week 6 Comments: Collaborative Filtering for Implicit Feedback Datasets" />
@@ -299,60 +324,5 @@
 <category term="filtering" />
 <category term="recsys" />
 <summary>Paper’s contentI’ll be reviewing and commenting on a paper made by the GroupLens team on year 1999, where the team tried to go a little bit further on the Collaborative Filtering topic and issue some of the problems that rise when performing related tasks. It also introduces the advantages of using this method in recommender systems, and the most important metrics used to evaluate their performance.</summary>
-</entry>
-<entry>
-<title>Week 1 Comments: Collaborative Filtering Introduction</title>
-<link href="http://thomashepner.github.io/week-1-comments-collaborative-filtering-introduction/" rel="alternate" type="text/html" title="Week 1 Comments: Collaborative Filtering Introduction" />
-<published>2016-08-14T19:35:00-03:00</published>
-<updated>2016-08-14T19:35:00-03:00</updated>
-<id>http://thomashepner.github.io/week-1-comments-collaborative-filtering-introduction</id>
-<content type="html" xml:base="http://thomashepner.github.io/week-1-comments-collaborative-filtering-introduction/">&lt;h2 id=&quot;introduction-to-recommender-systems&quot;&gt;Introduction to Recommender Systems&lt;/h2&gt;
-
-&lt;p&gt;Recommender systems are platforms that try to solve the &lt;strong&gt;recommendation problem&lt;/strong&gt;, in which they seek to predict rating or preference that a user would give to an item.&lt;/p&gt;
-
-&lt;p&gt;I’ll be mainly reviewing a paper by the Grouplens Social Computing Research team at the University of Minnesota, which introduces the concept of Collaborative Filtering and builds a foundation on Recommender Systems theory.&lt;/p&gt;
-
-&lt;h2 id=&quot;grouplens-grouplens-an-open-architecture-for-collaborative-filtering-of-netnews&quot;&gt;Grouplens: Grouplens: An Open Architecture for Collaborative Filtering of Netnews&lt;/h2&gt;
-
-&lt;p&gt;This Grouplens paper offers evidence on the work done while trying to make recommendations for users of a news system called Usenet. Basically, a user could rate a post by scoring it from 1 (bad) to 5 (good), but the important thing about it is that the research group relied on the premise that &lt;strong&gt;a user rates an article with the score he/she thinks the platform would suggest&lt;/strong&gt;.&lt;/p&gt;
-
-&lt;p&gt;It is then introduced a simple method of rating prediction, using &lt;strong&gt;Pearson’s Correlation&lt;/strong&gt; between other users ratings, in order to predict the rating the active user would give to the un-rated article. In the examples shown in the paper, a positive value of correlation between two users means that they agree more, and a negative value suggests disagreement.&lt;/p&gt;
-
-&lt;p&gt;The predicted rating value is then calculated combining this correlations, in order to fill a user/rating matrix an then use predictions however the systems deems necessary.&lt;/p&gt;
-
-&lt;p&gt;Finally, the investigation sheds light on the issues natural to the recommendation problem, which will be commented further in following sections.&lt;/p&gt;
-
-&lt;h3 id=&quot;comments-and-critics&quot;&gt;Comments and critics&lt;/h3&gt;
-
-&lt;p&gt;First and foremost, it is interesting to see this paper as a precursor to recommender systems theory. Noting that it was written in 1994, it is impressive to see how visionary the Grouplens team was in discovering this problem and the needs for more specific information filtering. What impresses me is the fact that they were dealing with data traffic close to 100 MB per day, with user postings of over 140,000 articles in a two-week basis, which falls very short to today’s standards and needs for information.&lt;/p&gt;
-
-&lt;p&gt;This paper can be rightfully called a precursor to recommender systems theory because of the many investigations that rely upon it. It currently has 1,172 citations in the ACM academic network.&lt;/p&gt;
-
-&lt;p&gt;However, I found that the choice of using Pearson’s correlation was poorly explained, and in later investigations it is questioned by some authors, as the data should adapt to very strict models to give confident predictions. For example, the authors of “An Algorithmic Framework for Performing Collaborative Filtering”, five years later mentions that “Pearson’s correlation coefficient is derived from a linear regression model that relies in a set of assumptions regarding the data, namely that the relationship must be linear, and the errors must be independent and have a probability distribution with mean 0 an constant variance for every setting of the independent variable”. It is common to see these assumptions violated, so it is important to understand to which datasets the model adjusts better.&lt;/p&gt;
-
-&lt;p&gt;Still, the paper succeeds in determining the scaling issues that these platforms have, and in showing some ways in which they can be tackled. They assessed score prediction’s quality, rating’s posting and prediction’s reception waiting time, and network traffic issues.&lt;/p&gt;
-
-&lt;h3 id=&quot;references&quot;&gt;References&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Resnick, P., Iacovou, N., Suchak, M., Bergstrom, P., &amp;amp; Riedl, J. (1994, October). GroupLens: an open architecture for collaborative filtering of netnews. In Proceedings of the 1994 ACM conference on Computer supported cooperative work (pp. 175-186). ACM.&lt;/li&gt;
-  &lt;li&gt;Herlocker, J. L., Konstan, J. A., Borchers, A., &amp;amp; Riedl, J. (1999, August). An algorithmic framework for performing collaborative filtering. In Proceedings of the 22nd annual international ACM SIGIR conference on Research and development in information retrieval (pp. 230-237).&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;evan-millers-blog-how-not-to-sort-by-average-rating&quot;&gt;Evan Miller’s blog: How Not To Sort By Average Rating&lt;/h2&gt;
-&lt;p&gt;This post was interesting as it proposes a simple way for sorting rated items, using the lower bound of Wilson score confidence interval for a Bernoulli parameter. The good part is that the post suggest a couple of ways for implementing the score assignment algorithm, including Excel, Ruby and SQL statements.&lt;/p&gt;
-
-&lt;h3 id=&quot;references-1&quot;&gt;References&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;http://www.evanmiller.org/how-not-to-sort-by-average-rating.html&quot;&gt;http://www.evanmiller.org/how-not-to-sort-by-average-rating.html&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</content>
-<author>
-<name>thomashepner</name>
-</author>
-<category term="collaborative" />
-<category term="filtering" />
-<category term="recsys" />
-<summary>Introduction to Recommender Systems</summary>
 </entry>
 </feed>
