@@ -3,10 +3,45 @@
 <generator uri="http://jekyllrb.com" version="3.0.3">Jekyll</generator>
 <link href="http://thomashepner.github.io/feed.xml" rel="self" type="application/atom+xml" />
 <link href="http://thomashepner.github.io/" rel="alternate" type="text/html" />
-<updated>2016-09-29T16:23:25-03:00</updated>
+<updated>2016-09-30T11:29:15-03:00</updated>
 <id>http://thomashepner.github.io/</id>
 <title>Thomas Hepner</title>
 <subtitle>Thoughts on RecSys readings and papers.</subtitle>
+<entry>
+<title>Week 10 Comments: Context-Aware Recommender Systems</title>
+<link href="http://thomashepner.github.io/week-10-comments-context-aware-recommender-systems/" rel="alternate" type="text/html" title="Week 10 Comments: Context-Aware Recommender Systems" />
+<published>2016-09-30T10:00:00-03:00</published>
+<updated>2016-09-30T10:00:00-03:00</updated>
+<id>http://thomashepner.github.io/week-10-comments-context-aware-recommender-systems</id>
+<content type="html" xml:base="http://thomashepner.github.io/week-10-comments-context-aware-recommender-systems/">&lt;h2 id=&quot;papers-content&quot;&gt;Paper’s content&lt;/h2&gt;
+
+&lt;p&gt;This investigation proposes a recommender system that also uses the context in which the rating happened to include this potentially useful information into the knowledge stream. The goal is to label every user action with an appropriate context, and then build a system that makes good use of it. Still, it is difficult to define context because of its multifaceted nature, and there are many questions to be answered in order to apply this kind of information into a recommendation. There are two views to context: &lt;strong&gt;representational&lt;/strong&gt; and &lt;strong&gt;interactional&lt;/strong&gt; contexts, where the first is independent from the underlying activity being performed, whereas the second assumes a cyclical relationship between context and activity, each one influencing the other over and over again.&lt;/p&gt;
+
+&lt;p&gt;The approach followed by the authors makes use of &lt;strong&gt;contextual factors&lt;/strong&gt;, such as time, location, and purchasing purpose. These factors can be catalogued by the knowledge we have of them, and by how they change (static, dynamic). This two categories define a category matrix, and the authors focus only on static, fully observable context. In that manner, they define a model in which a new dimension is used to calculate ratings:&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;R: Users&lt;/em&gt; x &lt;em&gt;Items&lt;/em&gt; x &lt;em&gt;Contexts&lt;/em&gt; -&amp;gt; &lt;em&gt;Ratings&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;This model raises the issue of scalability right away: it needs to include a way of computing similarities efficiently, given that three dimensions would normally lead to &lt;em&gt;O(n^3)&lt;/em&gt; complexities.  In order to filter the context, three approaches are proposed: contextual prefiltering, contextual postfiltering, and contextual modeling.&lt;/p&gt;
+
+&lt;p&gt;Contextual prefiltering uses contextual information to select the most relevant User x Item tuples for generating recommendations, where the context serves as a query for selecting the data. However, the exact context sometimes can be too narrow, and the exact context may not have enough data for accurate predictions. Later investigations assess this issue by splitting user profiles into several sub-profiles that represent the user in different problems. This, however, raises the overlapping user profiles problem.&lt;/p&gt;
+
+&lt;p&gt;Contextual postfiltering ignores context information until a recommendation is made, and adjusts the obtained recommendation list to the context afterwards, using either a model-based or a heuristics-based approach. A major advantage of this is that it allows using any traditional recommendation technique to provide the top-N item list for a user.&lt;/p&gt;
+
+&lt;p&gt;Contextual modeling uses context directly in the recommendation function, allowing truly multidimensional recommendation functions that may rely on decision trees, regresions, or even heuristics that incorporate contextual information. In this type of modeling it has been used a tensor based approach, in response to the popular matrix factorization method, but allowing for &lt;em&gt;n&lt;/em&gt;-dimensions in the calculations. Further research shows that context-aware SVM outperforms noncontextual SVM in terms of predictive accuracy.&lt;/p&gt;
+
+&lt;h2 id=&quot;comments-and-critics&quot;&gt;Comments and critics&lt;/h2&gt;
+&lt;p&gt;I found the paper very complete, although I missed some comparisons between noncontextual methods and CARS, specially in the POI example they provided. Still, it is interesting how they sort of “predict” the applications in which this topic would’ve involved in the future.
+A couple of students from the RecSys course at PUC Chile did a comparison between implicit feedback and context-aware recommendations, where they compared Hu and Koren’s implicit feedback algorithm with tensor factorization and factorization machines in order to see tradeoffs between these approaches, using the MovieCity dataset. Even though factorization machines rating prediction outperformed the other approaches, it was interesting to find out that the implicit feedback algorithm was better in making a ranking of recommendations, therefore concluding that context not necessarily improves a top-N task.
+Applied to this paper, it would seem that a combination between contextual modeling and implicit feedback could yield an optimal combination towards making recommendations to a user: using the context to make predictions, and then including implicit feedback to make a top-N recommendation. It would be interesting to see this approach in further research, building a hybrid system that uses both context and implicit feedback in the recommendation engine.&lt;/p&gt;
+</content>
+<author>
+<name>thomashepner</name>
+</author>
+<category term="context" />
+<category term="aware" />
+<category term="recsys" />
+<summary>Paper’s content</summary>
+</entry>
 <entry>
 <title>Week 9 Comments: Recommender Systems: from Algorithms to User Experience</title>
 <link href="http://thomashepner.github.io/week-9-comments-recommender-systems-from-algorithms-to-user-experience/" rel="alternate" type="text/html" title="Week 9 Comments: Recommender Systems: from Algorithms to User Experience" />
@@ -299,35 +334,5 @@
 <category term="filtering" />
 <category term="recsys" />
 <summary>Paper’s contentThis paper introduces a brand new approach to Collaborative Filtering. Instead of computing predictions for ratings that a user would give to an item based on user-to-user similarity, this algorithm isolates the users that have rated a given pair of items an then computes the similarity between those items. They also present several ways to calculate this similarity, like cosine based, correlation based, and adjusted-cosine based similarities, and show how to use them to make predictions.</summary>
-</entry>
-<entry>
-<title>Week 2 Comments: An Algorithmic Framework For Performing Collaborative Filtering</title>
-<link href="http://thomashepner.github.io/week-2-comments-an-algorithmic-framework-for-performing-collaborative-filtering/" rel="alternate" type="text/html" title="Week 2 Comments: An Algorithmic Framework For Performing Collaborative Filtering" />
-<published>2016-08-21T15:35:00-03:00</published>
-<updated>2016-08-21T15:35:00-03:00</updated>
-<id>http://thomashepner.github.io/week-2-comments-an-algorithmic-framework-for-performing-collaborative-filtering</id>
-<content type="html" xml:base="http://thomashepner.github.io/week-2-comments-an-algorithmic-framework-for-performing-collaborative-filtering/">&lt;h2 id=&quot;papers-content&quot;&gt;Paper’s content&lt;/h2&gt;
-&lt;p&gt;I’ll be reviewing and commenting on a paper made by the GroupLens team on year 1999, where the team tried to go a little bit further on the Collaborative Filtering topic and issue some of the problems that rise when performing related tasks. It also introduces the advantages of using this method in recommender systems, and the most important metrics used to evaluate their performance.&lt;/p&gt;
-
-&lt;p&gt;Particularly important and relevant in this investigation is the definition of metrics for measuring a system’s performance. They assess three key dimensions: &lt;strong&gt;coverage&lt;/strong&gt; (percentage of items for which a recommender system can provide predictions), &lt;strong&gt;statistical accuracy&lt;/strong&gt; (compares the numerical prediction values against user ratings for the for the items that have both predictions and ratings), and &lt;strong&gt;decision-support accuracy&lt;/strong&gt; (how effectively predictions help a user select high-quality items from the item set).&lt;/p&gt;
-
-&lt;p&gt;They based their experiments on different ways for weighting users with respect to different relevant dimensions. The first one is users &lt;strong&gt;similarity&lt;/strong&gt;, based on the assumption that people trust historical providers of accurate recommendations. Then they focus on &lt;strong&gt;significance&lt;/strong&gt;, addressing the amount of trust to be placed in a correlation with another user. Finally, they study &lt;strong&gt;variance&lt;/strong&gt;, when some ratings a user gives to certain items is more valuable than others in discerning his/her interest.&lt;/p&gt;
-
-&lt;p&gt;Finally, the measured and studied algorithms for producing predictions and selecting a user’s neighborhood, both very sensitive to scalability and performance issues.&lt;/p&gt;
-
-&lt;h2 id=&quot;comments-and-critics&quot;&gt;Comments and critics&lt;/h2&gt;
-&lt;p&gt;This paper succeeds in presenting the recommendation problem as separate components, and delivering new algorithms that enhance the accuracy of predictions. I found interesting the introduction of the Spearman rank correlation coefficient, similar to Pearson’s but that doesn’t rely on strict model assumptions that may not apply to every dataset. Still, this method does not work well when ranking scales are too small, because of the amount of tied rankings.&lt;/p&gt;
-
-&lt;p&gt;I found especially important the introduction of ROC sensitivity for measuring the diagnostic power of a filtering system. This metric compares &lt;strong&gt;sensitivity&lt;/strong&gt;, or the probability of a randomly selecting good item being accepted, against &lt;strong&gt;specificity&lt;/strong&gt;. the chance of a randomly selected bad item being rejected by the filter. It is important because it introduces the concept of &lt;em&gt;goodness&lt;/em&gt; in information filtering, and also considers the probability of type I or type II errors in the test’s hypothesis.&lt;/p&gt;
-
-&lt;p&gt;Finally, the document still fails to address an important issue: scalability. Perhaps because large datasets of millions of user ratings didn’t exist at the time. Even though this wasn’t the research’s primary focus - they based their study in separating content filtering into separate components - I found out that the computing complexity of the problem was not addressed, and only in later related readings there were investigators trying to discover model-based solutions to the problem, as the Slope One Algorithm or Item-based content filtering.&lt;/p&gt;
-</content>
-<author>
-<name>thomashepner</name>
-</author>
-<category term="collaborative" />
-<category term="filtering" />
-<category term="recsys" />
-<summary>Paper’s contentI’ll be reviewing and commenting on a paper made by the GroupLens team on year 1999, where the team tried to go a little bit further on the Collaborative Filtering topic and issue some of the problems that rise when performing related tasks. It also introduces the advantages of using this method in recommender systems, and the most important metrics used to evaluate their performance.</summary>
 </entry>
 </feed>
