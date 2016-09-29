@@ -3,13 +3,13 @@
 <generator uri="http://jekyllrb.com" version="3.0.3">Jekyll</generator>
 <link href="http://thomashepner.github.io/feed.xml" rel="self" type="application/atom+xml" />
 <link href="http://thomashepner.github.io/" rel="alternate" type="text/html" />
-<updated>2016-09-26T18:33:37-03:00</updated>
+<updated>2016-09-29T16:23:25-03:00</updated>
 <id>http://thomashepner.github.io/</id>
 <title>Thomas Hepner</title>
 <subtitle>Thoughts on RecSys readings and papers.</subtitle>
 <entry>
-<title>Week 6 Comments: Recommender Systems: from Algorithms to User Experience</title>
-<link href="http://thomashepner.github.io/week-9-comments-recommender-systems-from-algorithms-to-user-experience/" rel="alternate" type="text/html" title="Week 6 Comments: Recommender Systems: from Algorithms to User Experience" />
+<title>Week 9 Comments: Recommender Systems: from Algorithms to User Experience</title>
+<link href="http://thomashepner.github.io/week-9-comments-recommender-systems-from-algorithms-to-user-experience/" rel="alternate" type="text/html" title="Week 9 Comments: Recommender Systems: from Algorithms to User Experience" />
 <published>2016-09-24T16:00:00-03:00</published>
 <updated>2016-09-24T16:00:00-03:00</updated>
 <id>http://thomashepner.github.io/week-9-comments-recommender-systems-from-algorithms-to-user-experience</id>
@@ -22,7 +22,12 @@
 
 &lt;p&gt;The third group regards &lt;strong&gt;hidden dangers&lt;/strong&gt;, or the social risks related to the wide deployment of recommenders. There are some subtle (and interesting) risks such as social relationships structure threats, so being careful with privacy, social consequences of recommenders, and the robustness and manipulation resistance is a must for anyone that wants to implement a system like this.&lt;/p&gt;
 
+&lt;p&gt;As the fourth and last group of research they assess the topic of putting the user in control, by reducing the workload in the choosing process. Still, users are more satisfied when they are given control over how the recommender works on their behalf. Topics on this research group are interactive recommendation dialogues, recommender context, group recommendations, explanations and transparency.&lt;/p&gt;
+
 &lt;h2 id=&quot;comments-and-critics&quot;&gt;Comments and critics&lt;/h2&gt;
+&lt;p&gt;As educative as this research may be, the part that I found most interesting was the &lt;strong&gt;looking forward&lt;/strong&gt; section, especially the part where they mention the upcoming challenges in the field. One topic that has always interested me is how complex systems scale, in a word where information needs are very demanding and in constant growth. Still, I think this paper didn’t go into the scalability issue too deeply. For example, it would’ve been interesting to see how the integration of new attributes in recommendation affects scalability, and what kind of research has been done in that area. On the other hand, even if this challenges remain the same as years go by, they don’t mention any new ones that may have rose as a result of recommendation becoming more complex.&lt;/p&gt;
+
+&lt;p&gt;By doing a little research myself I found two interesting investigations in this area. Even though they don’t relate to this paper’s main topic of categorizing recommender systems research, they give notion on what things are being researched today. In an investigation made by MIT academics (https://dspace.mit.edu/handle/1721.1/99785), a new matrix completion algorithm is introduced that proves effective in attacking the scalability problem. On the other hand, on another investigation (http://dl.acm.org/citation.cfm?id=2792842) they investigate machine learning methods to make &lt;em&gt;Elasticsearch&lt;/em&gt; a better recommender. Not going any further into the investigations’ content, we can see that there’s still research being done in coming up with better techniques for matrix factorizations or clustering, in order to make recommendation systems more scalable.&lt;/p&gt;
 </content>
 <author>
 <name>thomashepner</name>
