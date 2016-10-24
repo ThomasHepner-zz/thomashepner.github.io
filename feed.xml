@@ -3,10 +3,40 @@
 <generator uri="http://jekyllrb.com" version="3.0.3">Jekyll</generator>
 <link href="http://thomashepner.github.io/feed.xml" rel="self" type="application/atom+xml" />
 <link href="http://thomashepner.github.io/" rel="alternate" type="text/html" />
-<updated>2016-09-30T11:29:15-03:00</updated>
+<updated>2016-10-23T23:34:12-03:00</updated>
 <id>http://thomashepner.github.io/</id>
 <title>Thomas Hepner</title>
 <subtitle>Thoughts on RecSys readings and papers.</subtitle>
+<entry>
+<title>Week 11 Comments:  A survey of active learning in collaborative filtering recommender systems</title>
+<link href="http://thomashepner.github.io/week-11-comments-a-survey-of-active-learning-in-collaborative-filtering-recommender-systems/" rel="alternate" type="text/html" title="Week 11 Comments:  A survey of active learning in collaborative filtering recommender systems" />
+<published>2016-10-23T21:00:00-03:00</published>
+<updated>2016-10-23T21:00:00-03:00</updated>
+<id>http://thomashepner.github.io/week-11-comments-a-survey-of-active-learning-in-collaborative-filtering-recommender-systems</id>
+<content type="html" xml:base="http://thomashepner.github.io/week-11-comments-a-survey-of-active-learning-in-collaborative-filtering-recommender-systems/">&lt;h2 id=&quot;papers-content&quot;&gt;Paper’s content&lt;/h2&gt;
+&lt;p&gt;This paper researches about the state of the art on active learning, or how recommender systems tackle the problem of obtaining &lt;strong&gt;high quality data&lt;/strong&gt; that better represents the user’s preferences and improves the recommendation quality, done by asking the user to provide further ratings on items not yet rated, acquiring additional data. Active learning is motivated by situations where training data is expensive to obtain (like ratings, as users are reluctant to rate items).&lt;/p&gt;
+
+&lt;p&gt;This paper considers two active learning strategies relevant to collaborative filtering: &lt;strong&gt;personalization&lt;/strong&gt;, that describes the extent to which the selection of items for the user to rate is adapted to the user’s characteristics; and &lt;strong&gt;hybridization&lt;/strong&gt;, or whether the strategy takes only a single heuristic for selecting the items or if it combines several criteria.&lt;/p&gt;
+
+&lt;p&gt;The authors make an introduction to recommender systems and collaborative filtering, and then explain the concept of active learning, independent from the recommendation problem context. What’s interesting, though, are active learning applications to collaborative filtering. One would think that active learning would be similar to content-based or context-aware recommendation, where the model provides more information that could be useful to make better prediction. But what it actually does is make the user-item matrix less sparse, therefore improving accuracy and overall performance. Without going into much detail, active learning tries to predict user’s ratings based on groups of recommendations that can give better predictions if selected.&lt;/p&gt;
+
+&lt;p&gt;By separating active learning strategies into personalized and non-personalized, and there into single and combined heuristics, a large number of techniques arises, each one with metrics for evaluation.&lt;/p&gt;
+
+&lt;h2 id=&quot;comments-and-critics&quot;&gt;Comments and critics&lt;/h2&gt;
+&lt;p&gt;This investigation offers a very complete framework for selecting an active learning strategy in an operational system. For each technique, it shows its benefits and drawbacks, therefore making it easier and less riskier to implement. Finally, the authors provide a useful comparison table to better see the strategies side by side. This allows not only to see which metric is needed to evaluate each technique, but also to see if it can be done online or offline, which might be crucial for many systems.&lt;/p&gt;
+
+&lt;p&gt;What this investigation lacks, though, is a comparison between systems that include active learning into their recommendation engines and those that don’t, because it is not clear by how much active learning improves accuracy. Also, it is not clear how much active learning improves scalability when the matrix is too sparse. The initial impression is that by doing continuous active learning, the benefits in terms of performance would be immediate. The authors state this as an open issue for investigation, and assess the problem of persuading the user to provide ratings not only on registration, but all along its use of the system. This makes sense only for a small amount of applications. For example, I don’t see it being used in applications for restaurants, where the user might not be interested in rating items when he is not actively purchasing them. Still, it depends on the problem: Yelp seems to be pretty good in engaging users into providing ratings continuously.&lt;/p&gt;
+
+&lt;p&gt;Finally, one problem with active learning is that there is no universal agreement on which is the best algorithm to use, so an effort in studying the best option for an specific problem has to be considered if this is the approach that you want to implement.&lt;/p&gt;
+</content>
+<author>
+<name>thomashepner</name>
+</author>
+<category term="algorithms" />
+<category term="ux" />
+<category term="recsys" />
+<summary>Paper’s contentThis paper researches about the state of the art on active learning, or how recommender systems tackle the problem of obtaining high quality data that better represents the user’s preferences and improves the recommendation quality, done by asking the user to provide further ratings on items not yet rated, acquiring additional data. Active learning is motivated by situations where training data is expensive to obtain (like ratings, as users are reluctant to rate items).</summary>
+</entry>
 <entry>
 <title>Week 10 Comments: Context-Aware Recommender Systems</title>
 <link href="http://thomashepner.github.io/week-10-comments-context-aware-recommender-systems/" rel="alternate" type="text/html" title="Week 10 Comments: Context-Aware Recommender Systems" />
@@ -43,36 +73,6 @@ Applied to this paper, it would seem that a combination between contextual model
 <summary>Paper’s content</summary>
 </entry>
 <entry>
-<title>Week 9 Comments: Recommender Systems: from Algorithms to User Experience</title>
-<link href="http://thomashepner.github.io/week-9-comments-recommender-systems-from-algorithms-to-user-experience/" rel="alternate" type="text/html" title="Week 9 Comments: Recommender Systems: from Algorithms to User Experience" />
-<published>2016-09-24T16:00:00-03:00</published>
-<updated>2016-09-24T16:00:00-03:00</updated>
-<id>http://thomashepner.github.io/week-9-comments-recommender-systems-from-algorithms-to-user-experience</id>
-<content type="html" xml:base="http://thomashepner.github.io/week-9-comments-recommender-systems-from-algorithms-to-user-experience/">&lt;h2 id=&quot;papers-content&quot;&gt;Paper’s content&lt;/h2&gt;
-&lt;p&gt;The present paper works as a review of recommender systems history, making an introduction to the first approaches to solve the recommendation problem. Besides briefly mentioning the first algorithms studied, and early applications to this new kind of technology, they introduce four categories where research has been done regarding the user experience on recommender systems topic.&lt;/p&gt;
-
-&lt;p&gt;The first group is the &lt;strong&gt;user-recommender lifecycle&lt;/strong&gt;, and talks about how these systems can adapt to different user needs. For example, new users have different needs than experienced ones, therefore each type can provide different types of value into the system. These considerations should be taken into account when handling new users, recognizing a user’s lifecycle, and viewing the service the system provides to a community.&lt;/p&gt;
-
-&lt;p&gt;The second group of important research involves more &lt;strong&gt;sophisticated notions of quality&lt;/strong&gt;, trying to go a little further than the average error metric, as it misses the features that are most important to user satisfaction in recommenders applications. One important source of research comes from discovering different sources of error, and accounting for each one in order to avoid making bad mistakes. Another source comes from the shift to top-N recommenders, made popular in early retail sales applications, where the most important work was done by using top-N precision and recall metrics in evaluating a top-N recommender. Finally, multidimensional ratings and tags and data quality also provide important sources of investigation.&lt;/p&gt;
-
-&lt;p&gt;The third group regards &lt;strong&gt;hidden dangers&lt;/strong&gt;, or the social risks related to the wide deployment of recommenders. There are some subtle (and interesting) risks such as social relationships structure threats, so being careful with privacy, social consequences of recommenders, and the robustness and manipulation resistance is a must for anyone that wants to implement a system like this.&lt;/p&gt;
-
-&lt;p&gt;As the fourth and last group of research they assess the topic of putting the user in control, by reducing the workload in the choosing process. Still, users are more satisfied when they are given control over how the recommender works on their behalf. Topics on this research group are interactive recommendation dialogues, recommender context, group recommendations, explanations and transparency.&lt;/p&gt;
-
-&lt;h2 id=&quot;comments-and-critics&quot;&gt;Comments and critics&lt;/h2&gt;
-&lt;p&gt;As educative as this research may be, the part that I found most interesting was the &lt;strong&gt;looking forward&lt;/strong&gt; section, especially the part where they mention the upcoming challenges in the field. One topic that has always interested me is how complex systems scale, in a word where information needs are very demanding and in constant growth. Still, I think this paper didn’t go into the scalability issue too deeply. For example, it would’ve been interesting to see how the integration of new attributes in recommendation affects scalability, and what kind of research has been done in that area. On the other hand, even if this challenges remain the same as years go by, they don’t mention any new ones that may have rose as a result of recommendation becoming more complex.&lt;/p&gt;
-
-&lt;p&gt;By doing a little research myself I found two interesting investigations in this area. Even though they don’t relate to this paper’s main topic of categorizing recommender systems research, they give notion on what things are being researched today. In an investigation made by MIT academics (https://dspace.mit.edu/handle/1721.1/99785), a new matrix completion algorithm is introduced that proves effective in attacking the scalability problem. On the other hand, on another investigation (http://dl.acm.org/citation.cfm?id=2792842) they investigate machine learning methods to make &lt;em&gt;Elasticsearch&lt;/em&gt; a better recommender. Not going any further into the investigations’ content, we can see that there’s still research being done in coming up with better techniques for matrix factorizations or clustering, in order to make recommendation systems more scalable.&lt;/p&gt;
-</content>
-<author>
-<name>thomashepner</name>
-</author>
-<category term="algorithms" />
-<category term="ux" />
-<category term="recsys" />
-<summary>Paper’s contentThe present paper works as a review of recommender systems history, making an introduction to the first approaches to solve the recommendation problem. Besides briefly mentioning the first algorithms studied, and early applications to this new kind of technology, they introduce four categories where research has been done regarding the user experience on recommender systems topic.</summary>
-</entry>
-<entry>
 <title>Week 6 Comments: Collaborative Filtering for Implicit Feedback Datasets</title>
 <link href="http://thomashepner.github.io/week-6-comments-collaborative-filtering-for-implicit-feedback-datasets/" rel="alternate" type="text/html" title="Week 6 Comments: Collaborative Filtering for Implicit Feedback Datasets" />
 <published>2016-09-24T16:00:00-03:00</published>
@@ -106,6 +106,36 @@ Applied to this paper, it would seem that a combination between contextual model
 <category term="feedback" />
 <category term="recsys" />
 <summary>Paper’s contentHistoric recommender systems studies have come to distinguish two separate approaches for predicting and recommending items to a user: content-based and collaborative filtering recommendations, each with preferred applications when it comes to analyzing the dataset available or the need of the user. In this investigation, the authors introduced a new way of incorporating user data to collaborative filtering, in order to improve its accuracy, and also to assess problems such as cold start.</summary>
+</entry>
+<entry>
+<title>Week 10 Comments: Recommender Systems: from Algorithms to User Experience</title>
+<link href="http://thomashepner.github.io/week-10-comments-recommender-systems-from-algorithms-to-user-experience/" rel="alternate" type="text/html" title="Week 10 Comments: Recommender Systems: from Algorithms to User Experience" />
+<published>2016-09-24T16:00:00-03:00</published>
+<updated>2016-09-24T16:00:00-03:00</updated>
+<id>http://thomashepner.github.io/week-10-comments-recommender-systems-from-algorithms-to-user-experience</id>
+<content type="html" xml:base="http://thomashepner.github.io/week-10-comments-recommender-systems-from-algorithms-to-user-experience/">&lt;h2 id=&quot;papers-content&quot;&gt;Paper’s content&lt;/h2&gt;
+&lt;p&gt;The present paper works as a review of recommender systems history, making an introduction to the first approaches to solve the recommendation problem. Besides briefly mentioning the first algorithms studied, and early applications to this new kind of technology, they introduce four categories where research has been done regarding the user experience on recommender systems topic.&lt;/p&gt;
+
+&lt;p&gt;The first group is the &lt;strong&gt;user-recommender lifecycle&lt;/strong&gt;, and talks about how these systems can adapt to different user needs. For example, new users have different needs than experienced ones, therefore each type can provide different types of value into the system. These considerations should be taken into account when handling new users, recognizing a user’s lifecycle, and viewing the service the system provides to a community.&lt;/p&gt;
+
+&lt;p&gt;The second group of important research involves more &lt;strong&gt;sophisticated notions of quality&lt;/strong&gt;, trying to go a little further than the average error metric, as it misses the features that are most important to user satisfaction in recommenders applications. One important source of research comes from discovering different sources of error, and accounting for each one in order to avoid making bad mistakes. Another source comes from the shift to top-N recommenders, made popular in early retail sales applications, where the most important work was done by using top-N precision and recall metrics in evaluating a top-N recommender. Finally, multidimensional ratings and tags and data quality also provide important sources of investigation.&lt;/p&gt;
+
+&lt;p&gt;The third group regards &lt;strong&gt;hidden dangers&lt;/strong&gt;, or the social risks related to the wide deployment of recommenders. There are some subtle (and interesting) risks such as social relationships structure threats, so being careful with privacy, social consequences of recommenders, and the robustness and manipulation resistance is a must for anyone that wants to implement a system like this.&lt;/p&gt;
+
+&lt;p&gt;As the fourth and last group of research they assess the topic of putting the user in control, by reducing the workload in the choosing process. Still, users are more satisfied when they are given control over how the recommender works on their behalf. Topics on this research group are interactive recommendation dialogues, recommender context, group recommendations, explanations and transparency.&lt;/p&gt;
+
+&lt;h2 id=&quot;comments-and-critics&quot;&gt;Comments and critics&lt;/h2&gt;
+&lt;p&gt;As educative as this research may be, the part that I found most interesting was the &lt;strong&gt;looking forward&lt;/strong&gt; section, especially the part where they mention the upcoming challenges in the field. One topic that has always interested me is how complex systems scale, in a word where information needs are very demanding and in constant growth. Still, I think this paper didn’t go into the scalability issue too deeply. For example, it would’ve been interesting to see how the integration of new attributes in recommendation affects scalability, and what kind of research has been done in that area. On the other hand, even if this challenges remain the same as years go by, they don’t mention any new ones that may have rose as a result of recommendation becoming more complex.&lt;/p&gt;
+
+&lt;p&gt;By doing a little research myself I found two interesting investigations in this area. Even though they don’t relate to this paper’s main topic of categorizing recommender systems research, they give notion on what things are being researched today. In an investigation made by MIT academics (https://dspace.mit.edu/handle/1721.1/99785), a new matrix completion algorithm is introduced that proves effective in attacking the scalability problem. On the other hand, on another investigation (http://dl.acm.org/citation.cfm?id=2792842) they investigate machine learning methods to make &lt;em&gt;Elasticsearch&lt;/em&gt; a better recommender. Not going any further into the investigations’ content, we can see that there’s still research being done in coming up with better techniques for matrix factorizations or clustering, in order to make recommendation systems more scalable.&lt;/p&gt;
+</content>
+<author>
+<name>thomashepner</name>
+</author>
+<category term="algorithms" />
+<category term="ux" />
+<category term="recsys" />
+<summary>Paper’s contentThe present paper works as a review of recommender systems history, making an introduction to the first approaches to solve the recommendation problem. Besides briefly mentioning the first algorithms studied, and early applications to this new kind of technology, they introduce four categories where research has been done regarding the user experience on recommender systems topic.</summary>
 </entry>
 <entry>
 <title>Week 5 Comments: Matrix Factorization Techniques for Recommender Systems</title>
@@ -304,35 +334,5 @@ Applied to this paper, it would seem that a combination between contextual model
 <category term="filtering" />
 <category term="recsys" />
 <summary>Paper’s contentThis research shows another model-based approach for making collaborative filtering. The researcher’s main focus is to prove that a new model, called Slope One predictors, could provide:</summary>
-</entry>
-<entry>
-<title>Week 2 Comments: Item-based Collaborative Filtering Recommendation Algorithms</title>
-<link href="http://thomashepner.github.io/week-2-comments-item-based-collaborative-filtering-recommendation-algorithms/" rel="alternate" type="text/html" title="Week 2 Comments: Item-based Collaborative Filtering Recommendation Algorithms" />
-<published>2016-08-21T22:00:00-03:00</published>
-<updated>2016-08-21T22:00:00-03:00</updated>
-<id>http://thomashepner.github.io/week-2-comments-item-based-collaborative-filtering-recommendation-algorithms</id>
-<content type="html" xml:base="http://thomashepner.github.io/week-2-comments-item-based-collaborative-filtering-recommendation-algorithms/">&lt;h2 id=&quot;papers-content&quot;&gt;Paper’s content&lt;/h2&gt;
-&lt;p&gt;This paper introduces a brand new approach to Collaborative Filtering. Instead of computing predictions for ratings that a user would give to an item based on user-to-user similarity, this algorithm isolates the users that have rated a given pair of items an then computes the similarity &lt;strong&gt;between those items&lt;/strong&gt;. They also present several ways to calculate this similarity, like &lt;em&gt;cosine based&lt;/em&gt;, &lt;em&gt;correlation based&lt;/em&gt;, and &lt;em&gt;adjusted-cosine&lt;/em&gt; based similarities, and show how to use them to make predictions.&lt;/p&gt;
-
-&lt;p&gt;While trying to make predictions with this approach, the problem of two distant item vector arises: correlation may be misleading when the Euclidian distance between vectors is large, but they are still similar. That’s why they introduce a regression model for weighting similarities, so instead of using raw rating values, approximated values are used based on a linear regression model.&lt;/p&gt;
-
-&lt;p&gt;This research’s focus is on finding out if this different approach to Collaborative Filtering is similar or better than regular Collaborative Filtering, especially in terms of scalability. They discovered that, as item-based recommendation is model-based, it provided higher scalability, as it isolated neighborhood generation and prediction generation steps. This is mainly because the set of items is static compared to the number of users, that changes more often. Still, precomputing all item-to-item similarities would need O(n^2) space, which is not desirable in terms of performance. A solution to this would be retaining only small numbers of similar items (&lt;em&gt;k&lt;/em&gt; sized groups), with an obvious tradeoff in accuracy and coverage.&lt;/p&gt;
-
-&lt;h2 id=&quot;comments-and-critics&quot;&gt;Comments and critics&lt;/h2&gt;
-&lt;p&gt;I was skeptical on this new approach’s performance at first. It seemed to me than “inverting the problem’s matrix” would not yield improvements of any kind. But it turns out that the researchers have a fair point in having the strong assumption that the number or items remains fairly static through time, at least compared to the amount of users.&lt;/p&gt;
-
-&lt;p&gt;While trying to understand this approach, I took as an example the CiberDays that several e-commerces organize every now and then. Even though they introduce a large amount of new items every season, user growth escalates way quicker, and the advantages provided by pre-computation of item similarity may give an e-commerce platform the upper hand against its competition while trying to engage more users in better ways and in limited time.&lt;/p&gt;
-
-&lt;p&gt;Although this ways makes more sense (at least to me: when you are in an e-commerce store, you expect to see related items to what you are searching - that’s a fair assumption), it appears that the advantages are not as grand as one would expect, so the added complexity may not be worth the risk.&lt;/p&gt;
-
-&lt;p&gt;Still, this paper shows something that would be very important in the coming years: model-based algorithms provide high online performance, while making fairly strong assumptions. So by knowing the dataset well, you could implement a solution similar to this without loosing recommendation quality.&lt;/p&gt;
-</content>
-<author>
-<name>thomashepner</name>
-</author>
-<category term="collaborative" />
-<category term="filtering" />
-<category term="recsys" />
-<summary>Paper’s contentThis paper introduces a brand new approach to Collaborative Filtering. Instead of computing predictions for ratings that a user would give to an item based on user-to-user similarity, this algorithm isolates the users that have rated a given pair of items an then computes the similarity between those items. They also present several ways to calculate this similarity, like cosine based, correlation based, and adjusted-cosine based similarities, and show how to use them to make predictions.</summary>
 </entry>
 </feed>
