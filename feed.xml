@@ -3,10 +3,57 @@
 <generator uri="http://jekyllrb.com" version="3.0.3">Jekyll</generator>
 <link href="http://thomashepner.github.io/feed.xml" rel="self" type="application/atom+xml" />
 <link href="http://thomashepner.github.io/" rel="alternate" type="text/html" />
-<updated>2016-10-23T23:34:12-03:00</updated>
+<updated>2016-11-06T22:34:56-03:00</updated>
 <id>http://thomashepner.github.io/</id>
 <title>Thomas Hepner</title>
 <subtitle>Thoughts on RecSys readings and papers.</subtitle>
+<entry>
+<title>Week 13 Comments: A new approach to evaluating novel recommendations.</title>
+<link href="http://thomashepner.github.io/week-13-comments-a-new-approach-to-evaluating-novel-recommendations/" rel="alternate" type="text/html" title="Week 13 Comments: A new approach to evaluating novel recommendations." />
+<published>2016-11-06T21:00:00-03:00</published>
+<updated>2016-11-06T21:00:00-03:00</updated>
+<id>http://thomashepner.github.io/week-13-comments-a-new-approach-to-evaluating-novel-recommendations</id>
+<content type="html" xml:base="http://thomashepner.github.io/week-13-comments-a-new-approach-to-evaluating-novel-recommendations/">&lt;h2 id=&quot;papers-content&quot;&gt;Paper’s content&lt;/h2&gt;
+
+&lt;h2 id=&quot;comments-and-critics&quot;&gt;Comments and critics&lt;/h2&gt;
+</content>
+<author>
+<name>thomashepner</name>
+</author>
+<category term="algorithms" />
+<category term="novel" />
+<summary>Paper’s content</summary>
+</entry>
+<entry>
+<title>Week 12 Comments: The link prediction problem for social networks</title>
+<link href="http://thomashepner.github.io/week-12-comments-the-link-prediction-problem-for-social-networks/" rel="alternate" type="text/html" title="Week 12 Comments: The link prediction problem for social networks" />
+<published>2016-10-30T21:00:00-03:00</published>
+<updated>2016-10-30T21:00:00-03:00</updated>
+<id>http://thomashepner.github.io/week-12-comments-the-link-prediction-problem-for-social-networks</id>
+<content type="html" xml:base="http://thomashepner.github.io/week-12-comments-the-link-prediction-problem-for-social-networks/">&lt;h2 id=&quot;papers-content&quot;&gt;Paper’s content&lt;/h2&gt;
+&lt;p&gt;This paper introduces the problem of link prediction in recommender systems: given a snapshot of a social network in a given time, it seeks to accurately predict the edges that will be added to the network during the interval from the present to some specific future time. This can be applied to many situations in social networks; the example used in the research is based on a graph of collaborations between scientists, but a most familiar example could be to predict future friendships in a social network such as Facebook. More specifically, this investigation seeks to answer the question of to what extent do the intrinsic features of a social network provide useful information to model its evolution. Even though sources of new relationships occur independent to the graph’s topology, the authors state that a large number of new collaborations are hinted by the topology of the network. This could serve for many applications, such as security (conjectures that particular individuals are working together even though their interaction has not been directly observed), or to infer missing links from an observed network.&lt;/p&gt;
+
+&lt;p&gt;Several methods for link prediction are introduced, where they assign a connection weight score to pairs of nodes based on the input graph, and then produce a ranked list in decreasing order of score. The most basic approach was to rank pairs of nodes based on the length of their shortest path in the graph. More elaborate methods included using node neighborhoods, implicitly considering the ensemble of all paths between two nodes, and adding meta-approaches to clean the graph of tenuous edges.&lt;/p&gt;
+
+&lt;p&gt;As it was said before, many collaborations form for reasons outside the scope of the network, which means that the raw performance of the paper’s predictors is relatively low. Still, comparing with a random predictor suggested that there is indeed useful information contained in the topology of the graph alone. But this also leads to the small world problem, which consists of graphs full with short paths between nodes and makes the link prediction problem less approachable.&lt;/p&gt;
+
+&lt;h2 id=&quot;comments-and-critics&quot;&gt;Comments and critics&lt;/h2&gt;
+&lt;p&gt;I found this investigation quite interesting and easy to follow, but two questions lingered on after reading. First, the authors mentioned that they identified the authors of their dataset by their initials, which led to too much noise. I found that to be poorly explained, as authors could have been identified by unique IDs without introducing noise, but I suppose that there’s a reason for not doing that, and the authors just didn’t explain its complications. Also, when defining the &lt;em&gt;Core&lt;/em&gt; used for testing each method, they justified that definition because the experiments would not be sensitive to the Core’s size, but without showing how the size of the Core and the results of the experiment are independent.&lt;/p&gt;
+
+&lt;p&gt;The other question rose when reading about overlaps in several predictors. Unsurprisingly, many predictors have common predictions, but some of the large overlaps do not seem to follow obviously from the predictions of the measures. The authors justification for this statement is that some datasets have simpler structures than others, but don’t explain what they mean with the word “simpler”, leaving me to guess that some datasets are less dense than others, which impacts overlapping.&lt;/p&gt;
+
+&lt;p&gt;Finally, I found that the paper refers excessively to collaborations between scientists, which leads to less understanding of applications that each method could have in other fields. For example, their propose clustering methods for cleaning the graph or for making better predictions, maybe by grouping scientists by their investigation field. But how can that be applied to a friendship context such as Facebook? Maybe a more general framework for clustering by categories could have been useful to better understand how they can be applied to exploit the graph’s topology.&lt;/p&gt;
+</content>
+<author>
+<name>thomashepner</name>
+</author>
+<category term="algorithms" />
+<category term="graphs" />
+<category term="recsys" />
+<category term="links" />
+<category term="social" />
+<summary>Paper’s contentThis paper introduces the problem of link prediction in recommender systems: given a snapshot of a social network in a given time, it seeks to accurately predict the edges that will be added to the network during the interval from the present to some specific future time. This can be applied to many situations in social networks; the example used in the research is based on a graph of collaborations between scientists, but a most familiar example could be to predict future friendships in a social network such as Facebook. More specifically, this investigation seeks to answer the question of to what extent do the intrinsic features of a social network provide useful information to model its evolution. Even though sources of new relationships occur independent to the graph’s topology, the authors state that a large number of new collaborations are hinted by the topology of the network. This could serve for many applications, such as security (conjectures that particular individuals are working together even though their interaction has not been directly observed), or to infer missing links from an observed network.</summary>
+</entry>
 <entry>
 <title>Week 11 Comments:  A survey of active learning in collaborative filtering recommender systems</title>
 <link href="http://thomashepner.github.io/week-11-comments-a-survey-of-active-learning-in-collaborative-filtering-recommender-systems/" rel="alternate" type="text/html" title="Week 11 Comments:  A survey of active learning in collaborative filtering recommender systems" />
@@ -258,81 +305,5 @@ Applied to this paper, it would seem that a combination between contextual model
 <category term="content" />
 <category term="recsys" />
 <summary>Paper’s contentAs user-contributed content is becoming more diverse in nature and quality, and traditional 5-10 point ratings are mostly unavailable, there are some new challenges for collaborative tagging systems. The loss of quality control and fine-grained ratings in these systems can be compensated by tags and explicit connections between users. Still, the paper states that there was no standard in how to take these features into account. There is some evidence, though, that social links improve personalization quality.</summary>
-</entry>
-<entry>
-<title>Week 3 Comments: Recommender Systems: Sources of Knowledge and Evaluation Metrics</title>
-<link href="http://thomashepner.github.io/week-3-comments-recommender-systems-sources-of-knowledge-and-evaluation-metrics/" rel="alternate" type="text/html" title="Week 3 Comments: Recommender Systems: Sources of Knowledge and Evaluation Metrics" />
-<published>2016-08-28T15:35:00-03:00</published>
-<updated>2016-08-28T15:35:00-03:00</updated>
-<id>http://thomashepner.github.io/week-3-comments-recommender-systems-sources-of-knowledge-and-evaluation-metrics</id>
-<content type="html" xml:base="http://thomashepner.github.io/week-3-comments-recommender-systems-sources-of-knowledge-and-evaluation-metrics/">&lt;h2 id=&quot;papers-content&quot;&gt;Paper’s content&lt;/h2&gt;
-&lt;p&gt;This paper offers an introduction to Recommender Systems, doing a quick review of their history and some of the most popular related algorithms used. First, it shows how these systems are classified in terms of &lt;strong&gt;how they get their input information&lt;/strong&gt;, their learning process (&lt;strong&gt;memory or model based&lt;/strong&gt;), etc. Thus, they fall into three categories: &lt;strong&gt;rule-based&lt;/strong&gt;, &lt;strong&gt;content-based&lt;/strong&gt;, and &lt;strong&gt;usage-based&lt;/strong&gt;.&lt;/p&gt;
-
-&lt;p&gt;Ruler-based systems make decisions based on some rules extracted from user profiles. They’re popular within e-commerce systems, where administrators can set rules based on statistical, psychological and demographic information about users. A problem with this systems are the complex methods used in generating profiles, and biased inputs for the filters.&lt;/p&gt;
-
-&lt;p&gt;Content-based recommender systems provide recommendations to users based on comparing items to others that the user has shown interest in. Thus, the user’s profile becomes an explanation of product characteristics that the user chose before. It relies on information retrieval techniques such as classification, clustering and text analysis.&lt;/p&gt;
-
-&lt;p&gt;Finally, Collaborative Filtering systems are also successful in e-commerce solutions, performing standard memory-based classification based on neighborhoods.&lt;/p&gt;
-
-&lt;p&gt;More importantly, the paper assesses several evaluation metrics for recommender systems. They can be classified into &lt;strong&gt;prediction based metrics&lt;/strong&gt;, that tells which algorithm makes fewer mistakes when inferring how a user will evaluate a proposed recommendation; &lt;strong&gt;information retrieval related metrics&lt;/strong&gt;, used when the user has the option to evaluate an item as relevant or not from a list of recommendations; and &lt;strong&gt;diversity, novelty, and coverage&lt;/strong&gt;, to compare between algorithms.&lt;/p&gt;
-
-&lt;h2 id=&quot;comments-and-critics&quot;&gt;Comments and critics&lt;/h2&gt;
-&lt;p&gt;As this paper is more of a review than an investigation, it is an informative way of displaying the state of the art in recommender systems (and as it was released in 2013, it is still an updated source of information).&lt;/p&gt;
-
-&lt;p&gt;I found interesting to learn about the Netflix Prize, and how a contest could drive a whole industry into improving its performance. Researching further, I found out that the secret before team Chaos’ success was combining different algorithms in their own account to improve final performance.&lt;/p&gt;
-
-&lt;p&gt;Several attempts of the team would lead into 7%, 8% improvements for the recommendation algorithm. Surprisingly (and un-intuitively), combining different approaches led to better results, even by continuously introducing new approaches to the solution.&lt;/p&gt;
-
-&lt;p&gt;Some of the team’s ideas were slicing the dataset by frequency, as people who rate a big bunch of movies at once tend to be rating movies that they watched a long time ago, showing different criteria for doing so. They also discovered that people tend to rate differently on Fridays versus Mondays, so moods appear by day of the week.&lt;/p&gt;
-
-&lt;p&gt;This relates to the paper because of the importance of knowing which evaluation metric to use in studying an algorithm. In the Netflix Prize, they used the Root Mean Squared Error metric, giving less importance to coverage, novelty and diversity, and focusing on accuracy.&lt;/p&gt;
-</content>
-<author>
-<name>thomashepner</name>
-</author>
-<category term="metrics" />
-<category term="sources" />
-<category term="recsys" />
-<summary>Paper’s contentThis paper offers an introduction to Recommender Systems, doing a quick review of their history and some of the most popular related algorithms used. First, it shows how these systems are classified in terms of how they get their input information, their learning process (memory or model based), etc. Thus, they fall into three categories: rule-based, content-based, and usage-based.</summary>
-</entry>
-<entry>
-<title>Week 2 Comments: Slope One Predictors for Online Rating-Based Collaborative Filtering</title>
-<link href="http://thomashepner.github.io/week-2-comments-slope-one-predictors-for-online-rating-based-collaborative-filtering/" rel="alternate" type="text/html" title="Week 2 Comments: Slope One Predictors for Online Rating-Based Collaborative Filtering" />
-<published>2016-08-21T22:00:00-03:00</published>
-<updated>2016-08-21T22:00:00-03:00</updated>
-<id>http://thomashepner.github.io/week-2-comments-slope-one-predictors-for-online-rating-based-collaborative-filtering</id>
-<content type="html" xml:base="http://thomashepner.github.io/week-2-comments-slope-one-predictors-for-online-rating-based-collaborative-filtering/">&lt;h2 id=&quot;papers-content&quot;&gt;Paper’s content&lt;/h2&gt;
-&lt;p&gt;This research shows another model-based approach for making collaborative filtering. The researcher’s main focus is to prove that a new model, called Slope One predictors, could provide:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Ease of implementation.&lt;/li&gt;
-  &lt;li&gt;Ability to be updateable at execution.&lt;/li&gt;
-  &lt;li&gt;Efficiency at query time: queries fast at the expense of storage.&lt;/li&gt;
-  &lt;li&gt;Little expectation from first visitors.&lt;/li&gt;
-  &lt;li&gt;Accuracy within reason: a minor gain in accuracy is not always worth a major sacrifice in simplicity or scalability.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;A concept called &lt;em&gt;popularity differential&lt;/em&gt; is introduced, or how much better is one item liked than another. Many of this differentials exist within a training set for each unknown rating, and Slope One loosely takes advantage of them.&lt;/p&gt;
-
-&lt;p&gt;More specifically, Slope One predictors take into account both information from users who rated the same item, and from the other items rated by the same user - but it also considers data that is not factored in. In doing this, it only takes in ratings by users &lt;strong&gt;who have rated some common item with the &lt;em&gt;predictee&lt;/em&gt; user&lt;/strong&gt;, and only those ratings of items &lt;strong&gt;that the predictee user has also rated&lt;/strong&gt;.&lt;/p&gt;
-
-&lt;p&gt;But this first approach doesn’t take into account the number of ratings an observer has. As a user who has many ratings would be a much better predictor, the &lt;strong&gt;weighted slope one predictor&lt;/strong&gt; takes it into consideration. A more specific elaboration of the algorithm, called the &lt;strong&gt;bipolar slope one scheme&lt;/strong&gt;, splits the prediction in two parts: one for users that liked and one for users that disliked an item, applying a threshold between user’s liked and disliked items.&lt;/p&gt;
-
-&lt;h2 id=&quot;comments-and-critics&quot;&gt;Comments and critics&lt;/h2&gt;
-&lt;p&gt;The first consideration to have while studying Slope One is the one regarding the splitting the prediction into two. This is because this action “doubles” the number of users, but reduces the overall number of ratings in the calculation of the prediction, with an improvement in accuracy. Furthermore, splitting ratings into like and dislike subsets could improve accuracy even more. So, it is important to keep in mind a very quantifiable drawback in performance while separating predictions into groups.&lt;/p&gt;
-
-&lt;p&gt;Another question arises: what happens when the rating scale is not necessarily ordinal, when the difference between a 5-star rating and 4-stars is not the same as the one between 4-stars and 3-stars? It seems that calculating a threshold would be a more complex operation, hence making it harder to improve accuracy.&lt;/p&gt;
-
-&lt;p&gt;Still, this algorithm finally addresses the scalability problem while making the fair assumption that you only use a “cross shaped section” of the user-item matrix. Even though this assumption, I find it smart, given that the sparseness of the matrix is also being taken care of.&lt;/p&gt;
-
-&lt;p&gt;Further diving into recommender system’s history would show that Slope One predictors would become an important improvement, and be rapidly used by several enterprises.&lt;/p&gt;
-</content>
-<author>
-<name>thomashepner</name>
-</author>
-<category term="collaborative" />
-<category term="filtering" />
-<category term="recsys" />
-<summary>Paper’s contentThis research shows another model-based approach for making collaborative filtering. The researcher’s main focus is to prove that a new model, called Slope One predictors, could provide:</summary>
 </entry>
 </feed>
