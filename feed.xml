@@ -3,7 +3,7 @@
 <generator uri="http://jekyllrb.com" version="3.0.3">Jekyll</generator>
 <link href="http://thomashepner.github.io/feed.xml" rel="self" type="application/atom+xml" />
 <link href="http://thomashepner.github.io/" rel="alternate" type="text/html" />
-<updated>2016-11-06T22:34:56-03:00</updated>
+<updated>2016-11-06T23:40:21-03:00</updated>
 <id>http://thomashepner.github.io/</id>
 <title>Thomas Hepner</title>
 <subtitle>Thoughts on RecSys readings and papers.</subtitle>
@@ -14,15 +14,25 @@
 <updated>2016-11-06T21:00:00-03:00</updated>
 <id>http://thomashepner.github.io/week-13-comments-a-new-approach-to-evaluating-novel-recommendations</id>
 <content type="html" xml:base="http://thomashepner.github.io/week-13-comments-a-new-approach-to-evaluating-novel-recommendations/">&lt;h2 id=&quot;papers-content&quot;&gt;Paper’s content&lt;/h2&gt;
+&lt;p&gt;This research attempts to provide metrics for measuring the quality of novel recommendations in recommender systems. We are aware that asking a recommender for recommendations repeatedly might lead to similar results, which means few serendipitous predictions. Though in some fields serendipity is not that important, when recommending music or movies the user might be looking for items that are unknown to him/her. In this fields of work, novel recommendations are necessary in order to improve the user’s experience, and allow discovery in the recommendation workflow. Therefore, it is important to evaluate the quality of such systems in producing unknown, but relevant recommendations.&lt;/p&gt;
+
+&lt;p&gt;There are three elements that need to be taken into account. First, &lt;strong&gt;novelty&lt;/strong&gt;, or producing new and original recommendations, of a kind not seen before. Second, &lt;strong&gt;familiarity&lt;/strong&gt;, or delivering well known or easily recognizable predictions, but also taking care of being transparent on how the system came to make that recommendation. Finally, &lt;strong&gt;relevance&lt;/strong&gt;, or having an accurate recommender system.&lt;/p&gt;
+
+&lt;p&gt;Several authors have studied these key aspects, discovering that serendipity and novelty are indeed relevant aspects in the recommendation workflow. But no framework for evaluating those recommendations has been developed yet, denoting a need for designing evaluation metrics to deal with the effectiveness of novel recommendations, taking into account aspects such as usefulness and quality. Also, there’s a need to answer the question of how well a recommender system made a user aware of previously unknown items, and to what extent users accept the new recommendations.&lt;/p&gt;
+
+&lt;p&gt;They divided their investigation into &lt;strong&gt;item-centric evaluation&lt;/strong&gt; and &lt;strong&gt;user-centric evaluation&lt;/strong&gt;, each with different metrics and algorithms. Finally, the experiments conducted on the research were done on item-centric evaluation of music recommendation, comparing novel recommendations between a collaborative filtering algorithms, and a content-based algorithm. The results showed that, to provide familiar items, any of the two, plus a hybrid approach, work fine. Still, CF provides more conservative recommendations, less novel but with higher quality, but prone to popularity bias. On the other hand, CB is not affected by that bias, but provides recommendations with less quality.&lt;/p&gt;
 
 &lt;h2 id=&quot;comments-and-critics&quot;&gt;Comments and critics&lt;/h2&gt;
+&lt;p&gt;The only thing I can critic in this research is how the measure of quality in novel recommendations that they developed is so dependent on the datasets they chose to conduct their experiments, particularly because applying content-based algorithms works well with music in this context, but not so much on other areas. For example, in recommending books, similar items must have a much deeper natural language processing in order to determine the ones that are similar. In that case, it seems to me that making novel recommendations might depend on noisy data, therefore leading to un-accurate recommendations.&lt;/p&gt;
+
+&lt;p&gt;Still, what I find valuable and worth getting into is the introduction of feedback into novel recommendations. I think that user’s might be more engaged to provide feedback if the system is able to recommend something unknown but of their interest. For example, when I discover new music that I like in Spotify, I would most definitely provide feedback to “thank” the system. But, on the other hand, I would end up listening to that new artist repeatedly, which might mean that implicit feedback is also strong and accurate.&lt;/p&gt;
 </content>
 <author>
 <name>thomashepner</name>
 </author>
 <category term="algorithms" />
 <category term="novel" />
-<summary>Paper’s content</summary>
+<summary>Paper’s contentThis research attempts to provide metrics for measuring the quality of novel recommendations in recommender systems. We are aware that asking a recommender for recommendations repeatedly might lead to similar results, which means few serendipitous predictions. Though in some fields serendipity is not that important, when recommending music or movies the user might be looking for items that are unknown to him/her. In this fields of work, novel recommendations are necessary in order to improve the user’s experience, and allow discovery in the recommendation workflow. Therefore, it is important to evaluate the quality of such systems in producing unknown, but relevant recommendations.</summary>
 </entry>
 <entry>
 <title>Week 12 Comments: The link prediction problem for social networks</title>
