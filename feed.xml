@@ -3,10 +3,52 @@
 <generator uri="http://jekyllrb.com" version="3.0.3">Jekyll</generator>
 <link href="http://thomashepner.github.io/feed.xml" rel="self" type="application/atom+xml" />
 <link href="http://thomashepner.github.io/" rel="alternate" type="text/html" />
-<updated>2016-11-06T23:40:21-03:00</updated>
+<updated>2016-11-20T23:21:49-03:00</updated>
 <id>http://thomashepner.github.io/</id>
 <title>Thomas Hepner</title>
 <subtitle>Thoughts on RecSys readings and papers.</subtitle>
+<entry>
+<title>Week 14: a Survey of Point-of-Interest Recommendation in Location-Based Social Networks</title>
+<link href="http://thomashepner.github.io/week-14-a-survey-of-point-of-interest-recommendation-in-location-based-social-networks/" rel="alternate" type="text/html" title="Week 14: a Survey of Point-of-Interest Recommendation in Location-Based Social Networks" />
+<published>2016-11-20T21:00:00-03:00</published>
+<updated>2016-11-20T21:00:00-03:00</updated>
+<id>http://thomashepner.github.io/week-14-a-survey-of-point-of-interest-recommendation-in-location-based-social-networks</id>
+<content type="html" xml:base="http://thomashepner.github.io/week-14-a-survey-of-point-of-interest-recommendation-in-location-based-social-networks/">&lt;h2 id=&quot;papers-content&quot;&gt;Paper’s content&lt;/h2&gt;
+&lt;p&gt;This paper is a survey on the research done in the Point-of-Interest recommendation area, specifically in the context of Location-Based Social Networks, such as Foursquare, Facebook Places, among others. In this kind of social networks, the challenge lies in being able to recommend new places of interest to the current user, and also increase revenue by making &lt;em&gt;location-aware&lt;/em&gt; advertising. There’s a strong bond between the study of geography and this discipline, and many assumptions the methods we’ll see will do are based in laws of geography such as Tobler’s first law, which states that places that are closer to each other will be more related than those that are far apart.&lt;/p&gt;
+
+&lt;p&gt;POI recommendation is based in a frequency matrix, that records how many times a certain user has been to a certain place. Intuitively, it can be said that this matrix would be much more sparse than common user-item matrices. Some examples of frequency matrices present a density value of 2.5E(-4), far lower than ordinary rating matrices. On the other hand, as the context relies on social networks, it is important to find out how does the social influence in the network affects a recommendation.&lt;/p&gt;
+
+&lt;p&gt;The POI recommendation problem is formally defined as a set of users &lt;em&gt;U&lt;/em&gt; and a set of locations &lt;em&gt;L&lt;/em&gt;, where the places visited by a user are typically denoted by longitude, latitude, and a timestamp. The check-in frequency matrix is called &lt;em&gt;C&lt;/em&gt;, and there’s a list of friendship relationships, the &lt;em&gt;S&lt;/em&gt; matrix, that can contain social trust values, or just binary values for the existence of a relationship.&lt;/p&gt;
+
+&lt;p&gt;POI recommendation approaches can be divided into four groups:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Pure check-in data based&lt;/strong&gt;: relies on the assumption that two users are similar if they have checked-in many places in common. Basic approaches include User-based CF and Item-based CF (which can be translated into Location-Based CF, as items here are locations). For measuring similarity, a cosine similarity formula is used. More modern approaches have been developed, such as model-based matrix factorizations.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Geographical Influence Enhanced POI Recommendation&lt;/strong&gt;: this approach takes geographical influence into account, making the assumption that users prefer closer locations, and are interested in locations surrounding those they like. Some algorithms include power-law distribution, willingness as a function of distance, multi-center Gaussian models, etc.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Social Influence Enhanced POI Recommendation&lt;/strong&gt;: includes social relationships information to make recommendations, with algorithms like friend-based CF, probabilistic matrix factorization with social regularization, etc.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Temporal Influence Enhanced POI Recommendation&lt;/strong&gt;: includes the timestamps contained in the check-in information. Opposed to common recommender system operation, time is not used to weigh ratings by their date, but to discover at what time a user prefers a certain location. Some algorithms include different locations at different times, and temporal influence based in the fact that users have different check-in preferences at different times, and similar preferences at consecutive hours.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;comments-and-critics&quot;&gt;Comments and critics&lt;/h2&gt;
+&lt;p&gt;Reviewing every algorithm in the survey, the authors conclude that recommendations based in a binary check-in frequency matrix are better than those based on values of frequency. Also, opposed to common sense, they discovered that &lt;em&gt;social influence&lt;/em&gt; does not stand as a good input for making better recommendations, because they most typically ignore different types of relationships between people: similarity with an acquaintance has the same weight as one with a sibling. Finally, the researchers recognize fields of study on scalability, especially in parallelized computing methods for POI recommendations.&lt;/p&gt;
+
+&lt;p&gt;A critic to this paper is that they showed an algorithm proposed by Cheng et al. at 2012, called probabilistic matrix factorization social regularization, that integrates social influence information. But in showing the formula, they didn’t explain the way that algorithm calculates similarity between users, so it’s a mystery whether it is cosine similarity or maybe distance in the social-network graph, which has a huge impact in the algorithm’s complexity.&lt;/p&gt;
+</content>
+<author>
+<name>thomashepner</name>
+</author>
+<category term="poi" />
+<category term="lbsns" />
+<summary>Paper’s contentThis paper is a survey on the research done in the Point-of-Interest recommendation area, specifically in the context of Location-Based Social Networks, such as Foursquare, Facebook Places, among others. In this kind of social networks, the challenge lies in being able to recommend new places of interest to the current user, and also increase revenue by making location-aware advertising. There’s a strong bond between the study of geography and this discipline, and many assumptions the methods we’ll see will do are based in laws of geography such as Tobler’s first law, which states that places that are closer to each other will be more related than those that are far apart.</summary>
+</entry>
 <entry>
 <title>Week 13 Comments: A new approach to evaluating novel recommendations.</title>
 <link href="http://thomashepner.github.io/week-13-comments-a-new-approach-to-evaluating-novel-recommendations/" rel="alternate" type="text/html" title="Week 13 Comments: A new approach to evaluating novel recommendations." />
@@ -282,38 +324,5 @@ Applied to this paper, it would seem that a combination between contextual model
 <category term="content" />
 <category term="recsys" />
 <summary>Paper’s contentContent-based recommender systems follow a different approach from the ones we’ve studied so far. They analyze an item’s description to identify others that would be interesting to a certain user. As a system of this kind would need to analyze thousands of items in short periods of time, in order to recommend accurately to a user, every part of the process should be as efficient as possible. Therefore, it is of interest to represent each item in a way that it makes possible to process easily.</summary>
-</entry>
-<entry>
-<title>Week 4 Comments: Collaborative Filtering for Social Tagging Systems: an Experiment with CiteULike</title>
-<link href="http://thomashepner.github.io/week-4-comments-collaborative-filtering-for-social-tagging-systems-an-experiment-with-citeulike/" rel="alternate" type="text/html" title="Week 4 Comments: Collaborative Filtering for Social Tagging Systems: an Experiment with CiteULike" />
-<published>2016-09-04T16:00:00-03:00</published>
-<updated>2016-09-04T16:00:00-03:00</updated>
-<id>http://thomashepner.github.io/week-4-comments-collaborative-filtering-for-social-tagging-systems-an-experiment-with-citeulike</id>
-<content type="html" xml:base="http://thomashepner.github.io/week-4-comments-collaborative-filtering-for-social-tagging-systems-an-experiment-with-citeulike/">&lt;h2 id=&quot;papers-content&quot;&gt;Paper’s content&lt;/h2&gt;
-&lt;p&gt;As user-contributed content is becoming more diverse in nature and quality, and traditional 5-10 point ratings are mostly unavailable, there are some new challenges for collaborative tagging systems. The loss of quality control and fine-grained ratings in these systems can be compensated by tags and explicit connections between users. Still, the paper states that there was no standard in how to take these features into account. There is some evidence, though, that social links improve personalization quality.&lt;/p&gt;
-
-&lt;p&gt;The experiment conducted during this investigation consisted in crawling data from CiteULike: first, crawl a user’s posted articles. Then, calculate neighborhoods of users who posted the same articles and who share the same tags. Finally, use Krovetz’ algorithm to modify tags.&lt;/p&gt;
-
-&lt;p&gt;The algorithm tested consisted of two steps: find the neighborhood of the center user, and rank the articles to be recommended. They used three different approaches: &lt;strong&gt;Classic Collaborative Filtering&lt;/strong&gt;, &lt;strong&gt;Neighbor-weighted CF&lt;/strong&gt;, and &lt;strong&gt;BM25-based Similarity&lt;/strong&gt;.&lt;/p&gt;
-
-&lt;p&gt;While testing this different methods, they discovered that, as predicted, CCF performed worse than the other algorithms, that where very close in terms of performance. The results also led to find out that the ranking order of the recommendations was very close to the optimal one.&lt;/p&gt;
-
-&lt;p&gt;An important conclusion was that &lt;strong&gt;including the number of raters in the ranking formula is an important factor to consider in the success of these recommendations&lt;/strong&gt;, as it takes into account the weight a good rater has, compared too poor raters of a certain article. In doing so, this practice reduces the uncertainty produced by items with too few ratings.&lt;/p&gt;
-
-&lt;p&gt;As Pearson’s correlation performs badly in this context, tag-based approaches can be a suitable alternative to obtain user neighborhood in social tagging systems.&lt;/p&gt;
-
-&lt;h2 id=&quot;comments-and-critics&quot;&gt;Comments and critics&lt;/h2&gt;
-&lt;p&gt;The paper introduces the BM25-based formula for calculating similarity, a non-binary probabilistic method used in information retrieval that returns the relevance that the documents of one collection has given a query. It compares the tags of the center user with a query, and the set of tags of each neighbor as a document. This method was first used in the Okapi BM25 information retrieval system in the 1980s.&lt;/p&gt;
-
-&lt;p&gt;There are several extensions of the algorithm, like BM25F and BM25+. The first one considers the document to be composed from several fields, like headers and main text; the second addresses unfairly scored documents that have a similar relevance to shorter documents that do not contain the search query at all.&lt;/p&gt;
-
-&lt;p&gt;I think the use of information retrieval techniques is a good choice in this kind of systems, especially because tags are a structured form of information, therefore making it easier to retrieve information and rank recommendations.&lt;/p&gt;
-</content>
-<author>
-<name>thomashepner</name>
-</author>
-<category term="content" />
-<category term="recsys" />
-<summary>Paper’s contentAs user-contributed content is becoming more diverse in nature and quality, and traditional 5-10 point ratings are mostly unavailable, there are some new challenges for collaborative tagging systems. The loss of quality control and fine-grained ratings in these systems can be compensated by tags and explicit connections between users. Still, the paper states that there was no standard in how to take these features into account. There is some evidence, though, that social links improve personalization quality.</summary>
 </entry>
 </feed>
